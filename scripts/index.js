@@ -131,7 +131,7 @@ const countdown1 = () => {
 
   if (formatTime1(days) <= 0 ) {
     daysElement1.innerHTML = formatTime1(hours) + " Hr " + formatTime1(minutes) + " Min " + formatTime1(seconds) + " Sec";
-    dt1.classList.add("tester");
+    dt1.classList.add("tester2");
   }
 
   if (formatTime1(days) <= 0 && formatTime1(hours) <= 0){
@@ -209,7 +209,7 @@ const countdown2 = () => {
 
   if (formatTime2(days) <= 0 ) {
     daysElement2.innerHTML = formatTime2(hours) + " Hr " + formatTime2(minutes) + " Min " + formatTime2(seconds) + " Sec";
-    dt2.classList.add("tester");
+    dt2.classList.add("tester2");
   }
 
   if (formatTime2(days) <= 0 && formatTime2(hours) <= 0){
@@ -284,7 +284,7 @@ const countdown3 = () => {
 
   if (formatTime3(days) <= 0 ) {
     daysElement3.innerHTML = formatTime3(hours) + " Hr " + formatTime3(minutes) + " Min " + formatTime3(seconds) + " Sec";
-    dt3.classList.add("tester");
+    dt3.classList.add("tester2");
   }
 
   if (formatTime3(days) <= 0 && formatTime3(hours) <= 0){
@@ -359,7 +359,7 @@ const countdown4 = () => {
 
   if (formatTime4(days) <= 0 ) {
     daysElement4.innerHTML = formatTime4(hours) + " Hr " + formatTime4(minutes) + " Min " + formatTime4(seconds) + " Sec";
-    dt4.classList.add("tester");
+    dt4.classList.add("tester2");
   }
 
   if (formatTime4(days) <= 0 && formatTime4(hours) <= 0){
@@ -434,7 +434,7 @@ const countdown5 = () => {
 
   if (formatTime5(days) <= 0 ) {
     daysElement5.innerHTML = formatTime5(hours) + " Hr " + formatTime5(minutes) + " Min " + formatTime5(seconds) + " Sec";
-    dt5.classList.add("tester");
+    dt5.classList.add("tester2");
     
   }
 
