@@ -449,24 +449,10 @@ const countdown5 = () => {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement5.innerHTML = "Finished";
       labelElement.innerHTML = "WHY ARE WE STILL HERE? JUST TO SUFFER?";
-      document.getElementById('neigh').id = "gibhli";
-      document.addEventListener('click', musicPlay);
-       function musicPlay() {
-         document.getElementById('toto').play();
-         document.removeEventListener('click', musicPlay);
-          }
-
       return;
     } else {
       daysElement5.innerHTML = "Finished";
-      labelElement.innerHTML = "WHY ARE WE STILL HERE? JUST TO SUFFER?";
-      document.getElementById('neigh').id = "gibhli";
-      document.addEventListener('click', musicPlay);
-        function musicPlay() {
-          document.getElementById('toto').play();
-          document.removeEventListener('click', musicPlay);
-         }
-      
+      labelElement.innerHTML = "WHY ARE WE STILL HERE? JUST TO SUFFER?";    
     }
   }
 
@@ -480,15 +466,3 @@ countdown5();
 
 //Call countdown every second
 setInterval(countdown5, 1000);
-
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('toto').play();
-    document.removeEventListener('click', musicPlay);
-}
-
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('neigh').play();
-    document.removeEventListener('click', musicPlay);
-}
