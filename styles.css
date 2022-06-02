@@ -10,6 +10,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.johncena::-webkit-scrollbar {
+  display: none;
+}
+
 /*Animation Prefs*/
 @keyframes pulse {
  40% {background-color: #49e766;}
