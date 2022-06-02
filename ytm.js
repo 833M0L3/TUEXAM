@@ -9,7 +9,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '0',
     width: '0',
-    videoId: 'L77WpA6a_jA',
+    videoId: 'dlvqKF__rMQ',
     playerVars: {
       'playsinline': 1
     },
@@ -30,6 +30,9 @@ function onPlayerStateChange(event) {
     setTimeout(stopVideo, 6000);
     done = true;
   }
+  if (event.data === YT.PlayerState.ENDED) {
+    player.playVideo(); 
+}
 }
 function playVideo() {
   player.playVideo();
