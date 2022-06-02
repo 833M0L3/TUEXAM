@@ -47,10 +47,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(0deg, rgba(2, 2, 2, 0.4), rgba(110, 3, 66, 0.3)),
-    url(./assets/2200497.webp) center center no-repeat fixed;
-  background-size: cover;
-
 }
 h1 {
   color: var(--textColor);
