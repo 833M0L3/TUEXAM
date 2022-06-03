@@ -41,13 +41,18 @@ const countdown = () => {
       countdownElement.style.display = "none";
       st.style.paddingTop = '25vh';
       st.style.paddingBottom = '10vh';
-      return;
+      st.style.animation = 'pulse3 1s infinite alternate';
+      st.style.backgroundColor = '#f33333';
 
+
+      return;
     } else {
       labelElement.innerHTML = "PLEASE BE CAUTION ! EXAM IS UNDERWAY";
       countdownElement.style.display = "none";
       st.style.paddingTop = '25vh';
       st.style.paddingBottom = '10vh';
+      st.style.animation = 'pulse3 1s infinite alternate';
+      st.style.backgroundColor = '#f33333';
     }
   }
 
