@@ -41,8 +41,6 @@ const countdown = () => {
       countdownElement.style.display = "none";
       st.style.paddingTop = '25vh';
       st.style.paddingBottom = '10vh';
-      st.style.animation = 'pulse3 1s infinite alternate';
-      st.style.backgroundColor = '#f33333';
 
 
       return;
@@ -51,8 +49,6 @@ const countdown = () => {
       countdownElement.style.display = "none";
       st.style.paddingTop = '25vh';
       st.style.paddingBottom = '10vh';
-      st.style.animation = 'pulse3 1s infinite alternate';
-      st.style.backgroundColor = '#f33333';
     }
   }
 
