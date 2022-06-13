@@ -9,9 +9,11 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '0',
     width: '0',
-    videoId: 'tIhL2KHVdgE',
     playerVars: {
-      'playsinline': 1
+      listType: 'playlist',
+      list: 'PLcmGsFuGettMraQ3zZBb1ftHorfs_kW2e',
+      'playsinline': 1,
+      'autoplay': 1
     },
     events: {
       'onReady': onPlayerReady,
@@ -35,9 +37,24 @@ function onPlayerStateChange(event) {
     player.playVideo(); 
 }
 }
+
+function onPlayerReady(event) {
+  num = Math.floor(Math.random() * 83);
+  setTimeout(() => {
+    player.playVideoAt(num);
+  }, 5);
+}
+
 function playVideo() {
   player.playVideo();
 }
 
+document.getElementById("days").addEventListener("mouseover", mouseOver);
 
 document.addEventListener('click', playVideo);
+
+function mouseOver() {
+  setTimeout(() => {
+    player.playVideo();
+  }, 2);
+}
