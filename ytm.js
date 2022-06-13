@@ -7,11 +7,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '0',
-    width: '0',
-    videoId: 'eq8r1ZTma08',
+    height: '100',
+    width: '500',
     playerVars: {
-      'playsinline': 1
+      listType: 'playlist',
+      list: 'PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T',
+      'playsinline': 1,
+      'autoplay': 1
     },
     events: {
       'onReady': onPlayerReady,
@@ -35,9 +37,24 @@ function onPlayerStateChange(event) {
     player.playVideo(); 
 }
 }
+
+function onPlayerReady(event) {
+  num = Math.floor(Math.random() * 7);
+  setTimeout(() => {
+    player.playVideoAt(num);
+  }, 5);
+}
+
 function playVideo() {
   player.playVideo();
 }
 
+document.getElementById("days").addEventListener("mouseover", mouseOver);
 
 document.addEventListener('click', playVideo);
+
+function mouseOver() {
+  setTimeout(() => {
+    player.playVideo();
+  }, 2);
+}
