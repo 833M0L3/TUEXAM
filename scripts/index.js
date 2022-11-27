@@ -239,7 +239,7 @@ setInterval(countdown2, 1000);
 // Computer Architecture ///
 
 const formatExamdate2 = (year) => {
-  return `${year}-01-01T12:00:00`;
+  return `2023-01-01T12:00:00`;
 };
 
 let year3 = new Date().getFullYear();
@@ -314,7 +314,7 @@ setInterval(countdown3, 1000);
 // Computer Graphics //
 
 const formatExamdate3 = (year) => {
-  return `${year}-01-04T12:00:00`;
+  return `2023-01-04T12:00:00`;
 };
 
 let year4 = new Date().getFullYear();
@@ -389,7 +389,7 @@ setInterval(countdown4, 1000);
 // Statistics II //
 
 const formatExamdate4 = (year) => {
-  return `${year}-01-08T12:00:00`;
+  return `2023-01-08T12:00:00`;
 };
 
 let year5 = new Date().getFullYear();
