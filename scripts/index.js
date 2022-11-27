@@ -164,7 +164,7 @@ setInterval(countdown1, 1000);
 
 
 const formatExamdate1 = (year) => {
-  return `${year}-12-29T12:00:00`;
+  return `${year}-12-30T12:00:00`;
 };
 
 let year2 = new Date().getFullYear();
