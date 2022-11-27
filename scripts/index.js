@@ -18,7 +18,7 @@ const st = document.getElementById("particles-js")
 
 //Utility for ISO formating
 const formatBirthday = (year) => {
-  return `${year}-06-07T12:00:00`;
+  return `${year}-12-25T12:00:00`;
 };
 
 let year = new Date().getFullYear();
@@ -82,11 +82,11 @@ countdown();
 setInterval(countdown, 1000);
 
 
-// Discrete Structure //
+// Data Structure and Algorithm //
 
 
 const formatExamdate = (year) => {
-  return `${year}-06-07T12:00:00`;
+  return `${year}-12-25T12:00:00`;
 };
 
 let year1 = new Date().getFullYear();
@@ -160,11 +160,11 @@ setInterval(countdown1, 1000);
 
 
 
-// OOP ///
+// Numerical Method ///
 
 
 const formatExamdate1 = (year) => {
-  return `${year}-06-10T12:00:00`;
+  return `${year}-12-29T12:00:00`;
 };
 
 let year2 = new Date().getFullYear();
@@ -236,10 +236,10 @@ countdown2();
 setInterval(countdown2, 1000);
 
 
-// Microprocessor ///
+// Computer Architecture ///
 
 const formatExamdate2 = (year) => {
-  return `${year}-06-13T12:00:00`;
+  return `${year}-01-01T12:00:00`;
 };
 
 let year3 = new Date().getFullYear();
@@ -311,10 +311,10 @@ countdown3();
 setInterval(countdown3, 1000);
 
 
-// Mathematics II //
+// Computer Graphics //
 
 const formatExamdate3 = (year) => {
-  return `${year}-06-16T12:00:00`;
+  return `${year}-01-04T12:00:00`;
 };
 
 let year4 = new Date().getFullYear();
@@ -386,10 +386,10 @@ countdown4();
 setInterval(countdown4, 1000);
 
 
-// Statistics I //
+// Statistics II //
 
 const formatExamdate4 = (year) => {
-  return `${year}-06-19T12:00:00`;
+  return `${year}-01-08T12:00:00`;
 };
 
 let year5 = new Date().getFullYear();
