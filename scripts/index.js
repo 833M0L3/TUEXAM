@@ -18,7 +18,7 @@ const st = document.getElementById("particles-js")
 
 //Utility for ISO formating
 const formatBirthday = (year) => {
-  return `${year}-12-25T12:00:00`;
+  return `${year}-12-26T12:00:00`;
 };
 
 let year = new Date().getFullYear();
