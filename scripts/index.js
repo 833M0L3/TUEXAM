@@ -86,7 +86,7 @@ setInterval(countdown, 1000);
 
 
 const formatExamdate = (year) => {
-  return `${year}-12-25T12:00:00`;
+  return `${year}-12-26T12:00:00`;
 };
 
 let year1 = new Date().getFullYear();
@@ -164,7 +164,7 @@ setInterval(countdown1, 1000);
 
 
 const formatExamdate1 = (year) => {
-  return `${year}-12-30T12:00:00`;
+  return `${year}-12-29T12:00:00`;
 };
 
 let year2 = new Date().getFullYear();
@@ -389,7 +389,7 @@ setInterval(countdown4, 1000);
 // Statistics II //
 
 const formatExamdate4 = (year) => {
-  return `2023-01-08T12:00:00`;
+  return `2023-01-09T12:00:00`;
 };
 
 let year5 = new Date().getFullYear();
