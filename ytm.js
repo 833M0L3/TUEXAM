@@ -39,7 +39,7 @@ function onPlayerStateChange(event) {
 }
 
 function onPlayerReady(event) {
-  num = Math.floor(Math.random() * 22);
+  num = Math.floor(Math.random() * 35);
   setTimeout(() => {
     player.playVideoAt(num);
   }, 5);
