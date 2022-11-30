@@ -479,3 +479,5 @@ var ft = now.toLocaleString("en-US", {
     if (hours > 17) {//Night
       st.style.backgroundImage = "linear-gradient(rgba(6, 5, 5, 0.804), rgba(0, 0, 0, 0.311)), url('./assets/night.gif')";
     }
+
+// YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
