@@ -462,3 +462,20 @@ countdown5();
 
 //Call countdown every second
 setInterval(countdown5, 1000);
+
+var now = new Date();
+var hours = now.getHours();
+var ft = now.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true
+});
+
+
+    if (5 <= hours && hours < 19) {//Morning
+        st.style.backgroundImage = "linear-gradient(rgba(6, 5, 5, 0.667), rgba(255, 255, 255, 0.591)), url('./assets/day.gif')";
+    }
+    
+    if (19 <= hours && hours < 5) {//Night
+      st.style.backgroundImage = "linear-gradient(rgba(6, 5, 5, 0.804), rgba(0, 0, 0, 0.311)), url('./assets/night.gif')";
+    }
