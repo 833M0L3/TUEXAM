@@ -1,4 +1,3 @@
-
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -39,6 +38,13 @@ function onPlayerStateChange(event) {
 }
 
 function onPlayerReady(event) {
+  // Get the total number of videos in the playlist
+  var playlistId = 'PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T';
+  player.getPlaylist(playlistId, function(playlist) {
+    var totalVideos = playlist.length;
+    console.log('Total number of videos in playlist: ' + totalVideos);
+  });
+
   num = Math.floor(Math.random() * 98);
   setTimeout(() => {
     player.playVideoAt(num);
