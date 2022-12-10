@@ -62,7 +62,8 @@ function mouseOver() {
   setTimeout(() => {
     player.playVideo();
   }, 2);
-  
+}
+
 function Titledata () {
   var videoData = player.getVideoData();
   currentlyplaying = videoData.title
