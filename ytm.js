@@ -63,3 +63,13 @@ function mouseOver() {
     player.playVideo();
   }, 2);
 }
+
+function Titledata () {
+  var videoData = player.getVideoData();
+  currentlyplaying = videoData.title
+
+  document.getElementById('playing1').innerHTML = currentlyplaying
+}
+
+
+setInterval(Titledata, 1000);
