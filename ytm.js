@@ -44,6 +44,7 @@ function onPlayerReady(event) {
   });
   songs = songs.length;
   num = Math.floor(Math.random() * songs);
+  console.log('Fetched successfully');
   setTimeout(() => {
     player.playVideoAt(num);
   }, 5);
