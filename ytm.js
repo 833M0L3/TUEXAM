@@ -40,12 +40,10 @@ function onPlayerStateChange(event) {
 function onPlayerReady(event) {
   // Get the total number of videos in the playlist
   var playlistId = 'PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T';
-  player.getPlaylist(playlistId, function(playlist) {
-    var totalVideos = playlist.length;
-    console.log('Total number of videos in playlist: ' + totalVideos);
+  songs = player.getPlaylist(playlistId, function(playlist) {
   });
-
-  num = Math.floor(Math.random() * 98);
+  songs = songs.length;
+  num = Math.floor(Math.random() * songs);
   setTimeout(() => {
     player.playVideoAt(num);
   }, 5);
