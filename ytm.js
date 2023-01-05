@@ -60,26 +60,18 @@ function onPlayerReady(event) {
 
 function playVideo() {
   player.playVideo();
+  player.setLoop(true);
+  player.setVolume(50);
 }
-
-document.getElementById("days").addEventListener("mouseover", mouseOver);
 
 document.addEventListener('click', playVideo);
 
-function mouseOver() {
-  setTimeout(() => {
-    player.playVideo();
-  }, 2);
-}
 
 function Titledata () {
   var videoData = player.getVideoData();
   currentlyplaying = videoData.title
-
+  player.playVideo();
   document.getElementById('playing1').innerHTML = currentlyplaying
 }
 
-player.setLoop(true);
-player.setVolume(50);
 setInterval(Titledata, 1000);
-
