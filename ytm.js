@@ -73,3 +73,4 @@ function Titledata () {
 
 
 setInterval(Titledata, 1000);
+player.setLoop(true);
