@@ -66,7 +66,6 @@ function playVideo() {
 
 document.addEventListener('click', playVideo);
 
-
 function Titledata () {
   var videoData = player.getVideoData();
   currentlyplaying = videoData.title
@@ -75,3 +74,4 @@ function Titledata () {
 }
 
 setInterval(Titledata, 1000);
+player.setLoop(true);
