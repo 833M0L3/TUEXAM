@@ -1,3 +1,15 @@
+function random_playlist(ids)
+{
+  
+return ids[Math.floor(Math.random()*ids.length)];
+     
+}
+
+var ids = ["PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T", "PLcmGsFuGettM1RQAg1rNrAACVLBmIZ_pW"];
+
+let currentID = random_playlist(ids)
+
+
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
@@ -10,7 +22,7 @@ function onYouTubeIframeAPIReady() {
     width: '0',
     playerVars: {
       listType: 'playlist',
-      list: 'PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T',
+      list: currentID,
       'playsinline': 1,
       'autoplay': 1
     },
@@ -28,10 +40,6 @@ function onPlayerReady(event) {
 
 var done = false;
 function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
   if (event.data === YT.PlayerState.ENDED) {
     player.playVideo(); 
 }
@@ -39,7 +47,7 @@ function onPlayerStateChange(event) {
 
 function onPlayerReady(event) {
   // Get the total number of videos in the playlist
-  var playlistId = 'PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T';
+  var playlistId = currentID;
   songs = player.getPlaylist(playlistId, function(playlist) {
   });
   songs = songs.length;
@@ -52,25 +60,18 @@ function onPlayerReady(event) {
 
 function playVideo() {
   player.playVideo();
+  player.setLoop(true);
+  player.setVolume(50);
 }
-
-document.getElementById("days").addEventListener("mouseover", mouseOver);
 
 document.addEventListener('click', playVideo);
-
-function mouseOver() {
-  setTimeout(() => {
-    player.playVideo();
-  }, 2);
-}
 
 function Titledata () {
   var videoData = player.getVideoData();
   currentlyplaying = videoData.title
-
+  player.playVideo();
   document.getElementById('playing1').innerHTML = currentlyplaying
 }
-
 
 setInterval(Titledata, 1000);
 player.setLoop(true);
