@@ -18,7 +18,7 @@ const st = document.getElementById("particles-js")
 
 //Utility for ISO formating
 const formatBirthday = (year) => {
-  return `2022-12-26T12:00:00`;
+  return `2023-06-20T12:00:00`;
 };
 
 let year = new Date().getFullYear();
@@ -82,11 +82,11 @@ countdown();
 setInterval(countdown, 1000);
 
 
-// Data Structure and Algorithm //
+// Theory of Computation //
 
 
 const formatExamdate = (year) => {
-  return `2022-12-26T12:00:00`;
+  return `2023-06-20T12:00:00`;
 };
 
 let year1 = new Date().getFullYear();
@@ -160,11 +160,11 @@ setInterval(countdown1, 1000);
 
 
 
-// Numerical Method ///
+// Computer Networks ///
 
 
 const formatExamdate1 = (year) => {
-  return `2022-12-29T12:00:00`;
+  return `2023-06-23T12:00:00`;
 };
 
 let year2 = new Date().getFullYear();
@@ -236,10 +236,10 @@ countdown2();
 setInterval(countdown2, 1000);
 
 
-// Computer Architecture ///
+// Operating Systems ///
 
 const formatExamdate2 = (year) => {
-  return `2023-01-01T12:00:00`;
+  return `2023-06-26T12:00:00`;
 };
 
 let year3 = new Date().getFullYear();
@@ -311,10 +311,10 @@ countdown3();
 setInterval(countdown3, 1000);
 
 
-// Computer Graphics //
+// Database Management System //
 
 const formatExamdate3 = (year) => {
-  return `2023-01-04T12:00:00`;
+  return `2023-06-19T12:00:00`;
 };
 
 let year4 = new Date().getFullYear();
@@ -386,10 +386,10 @@ countdown4();
 setInterval(countdown4, 1000);
 
 
-// Statistics II //
+// Artificial Intelligence //
 
 const formatExamdate4 = (year) => {
-  return `2023-01-09T12:00:00`;
+  return `2023-07-02T12:00:00`;
 };
 
 let year5 = new Date().getFullYear();
