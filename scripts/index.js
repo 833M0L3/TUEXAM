@@ -314,7 +314,7 @@ setInterval(countdown3, 1000);
 // Database Management System //
 
 const formatExamdate3 = (year) => {
-  return `2023-06-19T12:00:00`;
+  return `2023-06-29T12:00:00`;
 };
 
 let year4 = new Date().getFullYear();
