@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch and Display Text</title>
+</head>
+<body>
+  <h1>Text from API:</h1>
+  <div id="textContainer"></div>
+
+  <script>
+    // Fetch the text from the API
+    fetch('http://127.0.0.1:8000/nepalidate/?format=json')
+      .then(response => response.text())
+      .then(data => {
+        // Display the text in the HTML element
+        document.getElementById('textContainer').textContent = data;
+      })
+      .catch(error => {
+        console.log('Error:', error);
+      });
+  </script>
+</body>
+</html>

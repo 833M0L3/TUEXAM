@@ -62,7 +62,7 @@ h1 {
 }
 .countdown-container {
   width: 77vw;
-  margin-top: 10vh;
+  margin-top: 1vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
