@@ -1,3 +1,12 @@
+var nextButton = document.getElementById('next');
+var previousButton = document.getElementById('previous');
+var switchPlaylistButton = document.getElementById('switchPlaylist');
+
+nextButton.addEventListener('click', nextVideo);
+previousButton.addEventListener('click', previousVideo);
+switchPlaylistButton.addEventListener('click', switchPlaylist);
+
+
 function random_playlist(ids)
 {
   
@@ -5,7 +14,7 @@ return ids[Math.floor(Math.random()*ids.length)];
      
 }
 
-var ids = ["PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T", "PLcmGsFuGettM1RQAg1rNrAACVLBmIZ_pW"];
+var ids = ["PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T", "PLcmGsFuGettM1RQAg1rNrAACVLBmIZ_pW", "PLPqPoUbjz1wjKhgbWeiGFg1P3f9X7amvY"];
 
 let currentID = random_playlist(ids)
 
@@ -58,19 +67,48 @@ function onPlayerReady(event) {
   }, 5);
 }
 
-function playVideo() {
-  player.playVideo();
-  player.setLoop(true);
-  player.setVolume(50);
+
+function nextVideo() {
+  player.nextVideo();
 }
 
-document.addEventListener('click', playVideo);
 
-function Titledata () {
+function previousVideo() {
+  player.previousVideo();
+}
+
+function switchPlaylist() {
+  currentID = random_playlist(ids);
+  player.loadPlaylist({
+    listType: 'playlist',
+    list: currentID,
+    'playsinline': 1,
+    'autoplay': 1
+  });
+}
+
+
+
+function Titledata() {
   var videoData = player.getVideoData();
-  currentlyplaying = videoData.title
+  var currentlyplaying = videoData.title;
+  var currentTime = player.getCurrentTime();
+  var duration = player.getDuration();
+  var formattedCurrentTime = YTIME(currentTime);
+  var formattedDuration = YTIME(duration);
+
+  var timeText = formattedCurrentTime + " / " + formattedDuration;
+
   player.playVideo();
-  document.getElementById('playing1').innerHTML = currentlyplaying
+  document.getElementById('playing1').innerHTML = currentlyplaying;
+  document.getElementById('timeText').innerHTML = timeText;
+}
+
+function YTIME(time) {
+  var minutes = Math.floor(time / 60);
+  var seconds = Math.floor(time % 60);
+  var formattedTime = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+  return formattedTime;
 }
 
 setInterval(Titledata, 1000);
