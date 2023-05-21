@@ -480,4 +480,17 @@ var ft = now.toLocaleString("en-US", {
       st.style.backgroundImage = "linear-gradient(rgba(6, 5, 5, 0.804), rgba(0, 0, 0, 0.311)), url('./assets/night.gif')";
     }
 
+fetch('https://results.bimal1412.com.np/nepalidate/')
+  .then(response => response.json())
+  .then(data => {
+    const textContainer = document.getElementById('textContainer');
+    if (data.date !== null) {
+      textContainer.textContent = data.date;
+      console.log('Fetched Date:', data.date);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
