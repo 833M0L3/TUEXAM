@@ -12,12 +12,71 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>EXAM DATE | CSIT 077 4TH SEM EXAM SCHEDULE</title>
     <link rel="shortcut icon" href="indreni.png">
+
+    <style>
+      * {
+          margin: 0px;
+          padding: 0px;
+          box-sizing: border-box;
+      }
+
+
+      #particles-js {
+          width: 100%;
+          height: 100vh;
+          background-image:
+              linear-gradient(rgba(6, 5, 5, 0.667),
+                  rgba(255, 255, 255, 0.591)),
+              url(./assets/day.gif);
+          background-position: center;
+          background-size: cover;
+      }
+
+      .center-text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+      h1 {
+          color: white;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: 100px;
+      }
+
+      .playing {
+          color: white;
+          font-size: 12px;
+          text-align: center;
+      }
+      .controls {
+        color: aliceblue;
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+      .controls i {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .controls i:active {
+            transform: rotate();
+            font-size: 20px;
+            color: red;
+        }
+
+       .indreni {
+        margin-top: 0.10px;
+       }
+  </style>
     <link rel="stylesheet" href="./styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <script defer src="./scripts/index.js"></script> 
+  
   </head>
   <body class="johncena">
     <section id="particles-js">
@@ -50,7 +109,7 @@
           <p class="big-text animate__animated animate__zoomIn" id="minutes">0</p>
           <span>MINUTES</span>
         </div>
-        <div class="responsive element-container animate__animated animate__zoomIn">
+        <div class="element-container animate__animated animate__zoomIn">
           <p class="big-text animate__animated animate__zoomIn" id="seconds">0</p>
           <span>SECONDS</span>
         </div>
@@ -106,5 +165,19 @@
     <script src="ytm.js"></script>
     <script src="particles.js"></script>
     <script src="app.js"></script>
+    <script>
+      fetch('https://results.bimal1412.com.np/nepalidate/')
+  .then(response => response.json())
+  .then(data => {
+    const textContainer = document.getElementById('textContainer');
+    if (data.date !== null) {
+      textContainer.textContent = data.date;
+      console.log('Fetched Date:', data.date);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+    </script>
   </body>
 </html>
