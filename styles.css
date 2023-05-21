@@ -10,6 +10,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+
+@media screen and (max-width: 400px) {
+  div.responsive {
+    display: none;
+  }
+}
+
 .johncena::-webkit-scrollbar {
   display: none;
 }
