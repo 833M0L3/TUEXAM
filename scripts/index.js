@@ -494,3 +494,16 @@ fetch('https://results.bimal1412.com.np/nepalidate/')
   });
 
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
+
+fetch('https://results.bimal1412.com.np/nepalidate/')
+.then(response => response.json())
+.then(data => {
+  const textContainer = document.getElementById('textContainer');
+  if (data.date !== null) {
+    textContainer.textContent = data.date;
+    console.log('Fetched Date:', data.date);
+  }
+})
+.catch(error => {
+  console.error('Error:', error);
+});
