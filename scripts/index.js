@@ -493,7 +493,6 @@ fetch('https://results.bimal1412.com.np/nepalidate/')
     console.error('Error:', error);
   });
 
-// YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
 
 fetch('https://results.bimal1412.com.np/nepalidate/')
 .then(response => response.json())
@@ -525,13 +524,11 @@ function w3_close() {
   div.classList.remove("visible");
 }
 
-var john12 = document.getElementById("particles-js")
-
 fetch('https://results.bimal1412.com.np/tunotice')
       .then(response => response.json())
       .then(data => {
         var sidebarList = document.getElementById("sidebar-list");
-        sidebarList.innerHTML = ""; // Clear existing list items
+        sidebarList.innerHTML = "";
         data.forEach(item => {
           var listItem = document.createElement("li");
           var link = document.createElement("a");
@@ -544,3 +541,5 @@ fetch('https://results.bimal1412.com.np/tunotice')
       .catch(error => {
         console.log('Error fetching JSON:', error);
       });
+
+// YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
