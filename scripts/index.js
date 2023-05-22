@@ -507,3 +507,40 @@ fetch('https://results.bimal1412.com.np/nepalidate/')
 .catch(error => {
   console.error('Error:', error);
 });
+
+function w3_open() {
+  var div = document.getElementById("sidebarhero");
+  if (div.classList.contains("visible")) {
+    div.classList.add("hidden");
+    div.classList.remove("visible");
+  } else {
+    div.classList.remove("hidden");
+    div.classList.add("visible");
+  }
+}
+
+function w3_close() {
+  var div = document.getElementById("sidebarhero");
+  div.classList.add("hidden");
+  div.classList.remove("visible");
+}
+
+var john12 = document.getElementById("particles-js")
+
+fetch('https://results.bimal1412.com.np/tunotice')
+      .then(response => response.json())
+      .then(data => {
+        var sidebarList = document.getElementById("sidebar-list");
+        sidebarList.innerHTML = ""; // Clear existing list items
+        data.forEach(item => {
+          var listItem = document.createElement("li");
+          var link = document.createElement("a");
+          link.href = item.pdf_link;
+          link.textContent = item.pdf_title;
+          listItem.appendChild(link);
+          sidebarList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.log('Error fetching JSON:', error);
+      });
