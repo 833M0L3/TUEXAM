@@ -14,7 +14,7 @@ return ids[Math.floor(Math.random()*ids.length)];
      
 }
 
-var ids = ["PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T", "PLcmGsFuGettM1RQAg1rNrAACVLBmIZ_pW", "PLPqPoUbjz1wjKhgbWeiGFg1P3f9X7amvY"];
+var ids = ["PLcmGsFuGettOwVTuZiVwvwG_adh_zZw3T", "PLcmGsFuGettM1RQAg1rNrAACVLBmIZ_pW", "PLPqPoUbjz1whK4V92rrlICyxSsa3BaElM"];
 
 let currentID = random_playlist(ids)
 
