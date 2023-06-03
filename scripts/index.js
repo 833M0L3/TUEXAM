@@ -26,6 +26,55 @@ const dt4 = document.getElementById("dt4");
 const dt5 = document.getElementById("dt5");
 const st = document.getElementById("particles-js")
 
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+let currentsem = getCookie('currentsem');
+let currentsemname = getCookie('currentsemname');
+
+if (currentsem === null) {
+  currentsem = '3';
+  setCookie('currentsem', currentsem);
+}
+
+if (currentsemname === null) {
+  currentsemname = '4th';
+  setCookie('currentsemname', currentsemname);
+}
+
+function setCookie(name, value) {
+  document.cookie = `${name}=${value}`;
+}
+
+document.querySelector('.dropdown-toggle').textContent = currentsemname;
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  const dropdownButton = document.querySelector('.dropdown-toggle');
+
+  dropdownItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      const value = this.getAttribute('data-value');
+      const name = this.textContent;
+      currentsem = value;
+      currentsemname = name;
+      setCookie('currentsem', value);
+      setCookie('currentsemname', name);
+      dropdownButton.textContent = name;
+      location.reload();
+    });
+  });
+});
+
+
+
 const formatDateData = (dateString) => {
   const date = new Date(dateString);
   const year = date.getFullYear();
@@ -50,8 +99,6 @@ const hoursData = (totalSeconds) => {
 const secondsData = (totalSeconds) => {
   return Math.floor(totalSeconds % 60);
 };
-
-const currentsem = 3;
 
 let initialDataValue;
 let sub1;
@@ -467,6 +514,5 @@ function fill_data() {
 }
 
 setInterval(fill_data, 1000);
-
 
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D

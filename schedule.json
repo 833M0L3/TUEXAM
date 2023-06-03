@@ -1,76 +1,80 @@
 [ 
 {
     "title" : "CSIT 1st Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Introduction to IT",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "C Programming",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Digital Logics",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Mathematics I",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Physics",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 },
 {
     "title" : "CSIT 2nd Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Discrete Structure",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Object Oriented Programming",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Microprocessor",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Mathematics II",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Statistics I",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 
 },
 {
     "title" : "CSIT 3rd Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Datastructure and Algorithm",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Numerical Method",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Computer Architecture",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
+        },
+        {
+            "subject": "Computer Graphics",
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Statistics II",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 },
@@ -102,109 +106,113 @@
 },
 {
     "title" : "CSIT 5th Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Design and Analysisc of Algorithms",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "System Analysis and Design",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Cryptography",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Simulation and Modeling",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Web Technology",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Elective I",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 },
 {
     "title" : "CSIT 6th Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Software Engineering",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Compiler Design and Construction",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "E-Governance",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "NET Centric Computing",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Technical Writing",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Elective II",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 },
 {
     "title" : "CSIT 7th Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Advanced JAVA Programming",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Data Warehousing and Data Mining",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Principles of Management",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Project Work",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Elective III",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         }
     ]
 },
 {
     "title" : "CSIT 8th Sem",
-    "initial" : "2023-06-20T12:00:00",
+    "initial" : "2022-06-20T12:00:00",
     "schedules" : [
         {
             "subject": "Advanced Database",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Internship",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Elective IV",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
         },
         {
             "subject": "Elective V",
-            "date": ""
+            "date": "2022-06-20T12:00:00"
+        },
+        {
+            "subject": "Elective VI",
+            "date": "2022-06-20T12:00:00"
         }
     ]
 }
