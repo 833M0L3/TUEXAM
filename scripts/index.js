@@ -51,6 +51,8 @@ const secondsData = (totalSeconds) => {
   return Math.floor(totalSeconds % 60);
 };
 
+const currentsem = 3;
+
 let initialDataValue;
 let sub1;
 let sub2;
@@ -63,24 +65,27 @@ let sub3name;
 let sub4name;
 let sub5name;
 
-fetch('schedule.json')
-  .then(response => response.json())
-  .then(data => {
-    initialDataValue = data[0].initial;
-    sub1 = data[0].schedules[0].date;
-    sub1name = data[0].schedules[0].subject;
-    sub2 = data[0].schedules[1].date;
-    sub2name = data[0].schedules[1].subject;
-    sub3 = data[0].schedules[2].date;
-    sub3name = data[0].schedules[2].subject;
-    sub4 = data[0].schedules[3].date;
-    sub4name = data[0].schedules[3].subject;
-    sub5 = data[0].schedules[4].date;
-    sub5name = data[0].schedules[4].subject;
-  })
-  .catch(error => {
-    console.error('Error loading the schedule:', error);
-  });
+function schedule() {
+  fetch('schedule.json')
+    .then(response => response.json())
+    .then(data => {
+      initialDataValue = data[currentsem].initial;
+      sub1 = data[currentsem].schedules[0].date;
+      sub1name = data[currentsem].schedules[0].subject;
+      sub2 = data[currentsem].schedules[1].date;
+      sub2name = data[currentsem].schedules[1].subject;
+      sub3 = data[currentsem].schedules[2].date;
+      sub3name = data[currentsem].schedules[2].subject;
+      sub4 = data[currentsem].schedules[3].date;
+      sub4name = data[currentsem].schedules[3].subject;
+      sub5 = data[currentsem].schedules[4].date;
+      sub5name = data[currentsem].schedules[4].subject;
+    })
+    .catch(error => {
+      console.error('Error loading the schedule:', error);
+    });
+}
+setInterval(schedule, 1000);
 
 let year = new Date().getFullYear();
 

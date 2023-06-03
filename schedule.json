@@ -1,4 +1,79 @@
-[   
+[ 
+{
+    "title" : "CSIT 1st Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Introduction to IT",
+            "date": ""
+        },
+        {
+            "subject": "C Programming",
+            "date": ""
+        },
+        {
+            "subject": "Digital Logics",
+            "date": ""
+        },
+        {
+            "subject": "Mathematics I",
+            "date": ""
+        },
+        {
+            "subject": "Physics",
+            "date": ""
+        }
+    ]
+},
+{
+    "title" : "CSIT 2nd Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Discrete Structure",
+            "date": ""
+        },
+        {
+            "subject": "Object Oriented Programming",
+            "date": ""
+        },
+        {
+            "subject": "Microprocessor",
+            "date": ""
+        },
+        {
+            "subject": "Mathematics II",
+            "date": ""
+        },
+        {
+            "subject": "Statistics I",
+            "date": ""
+        }
+    ]
+
+},
+{
+    "title" : "CSIT 3rd Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Datastructure and Algorithm",
+            "date": ""
+        },
+        {
+            "subject": "Numerical Method",
+            "date": ""
+        },
+        {
+            "subject": "Computer Architecture",
+            "date": ""
+        },
+        {
+            "subject": "Statistics II",
+            "date": ""
+        }
+    ]
+},
 {
     "title" : "CSIT 4th Sem",
     "initial" : "2023-06-20T12:00:00",
@@ -24,5 +99,113 @@
         }
        ]
 
+},
+{
+    "title" : "CSIT 5th Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Design and Analysisc of Algorithms",
+            "date": ""
+        },
+        {
+            "subject": "System Analysis and Design",
+            "date": ""
+        },
+        {
+            "subject": "Cryptography",
+            "date": ""
+        },
+        {
+            "subject": "Simulation and Modeling",
+            "date": ""
+        },
+        {
+            "subject": "Web Technology",
+            "date": ""
+        },
+        {
+            "subject": "Elective I",
+            "date": ""
+        }
+    ]
+},
+{
+    "title" : "CSIT 6th Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Software Engineering",
+            "date": ""
+        },
+        {
+            "subject": "Compiler Design and Construction",
+            "date": ""
+        },
+        {
+            "subject": "E-Governance",
+            "date": ""
+        },
+        {
+            "subject": "NET Centric Computing",
+            "date": ""
+        },
+        {
+            "subject": "Technical Writing",
+            "date": ""
+        },
+        {
+            "subject": "Elective II",
+            "date": ""
+        }
+    ]
+},
+{
+    "title" : "CSIT 7th Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Advanced JAVA Programming",
+            "date": ""
+        },
+        {
+            "subject": "Data Warehousing and Data Mining",
+            "date": ""
+        },
+        {
+            "subject": "Principles of Management",
+            "date": ""
+        },
+        {
+            "subject": "Project Work",
+            "date": ""
+        },
+        {
+            "subject": "Elective III",
+            "date": ""
+        }
+    ]
+},
+{
+    "title" : "CSIT 8th Sem",
+    "initial" : "2023-06-20T12:00:00",
+    "schedules" : [
+        {
+            "subject": "Advanced Database",
+            "date": ""
+        },
+        {
+            "subject": "Internship",
+            "date": ""
+        },
+        {
+            "subject": "Elective IV",
+            "date": ""
+        },
+        {
+            "subject": "Elective V",
+            "date": ""
+        }
+    ]
 }
 ]
