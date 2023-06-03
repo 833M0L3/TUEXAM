@@ -9,6 +9,16 @@ const daysElement5 = document.getElementById("demo4");
 const hoursElement = document.getElementById("hours");
 const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
+const subjectname1 = document.getElementById("sub1");
+const subjectname2 = document.getElementById("sub2");
+const subjectname3 = document.getElementById("sub3");
+const subjectname4 = document.getElementById("sub4");
+const subjectname5 = document.getElementById("sub5");
+const subjectdate1 = document.getElementById("sub1-date");
+const subjectdate2 = document.getElementById("sub2-date");
+const subjectdate3 = document.getElementById("sub3-date");
+const subjectdate4 = document.getElementById("sub4-date");
+const subjectdate5 = document.getElementById("sub5-date");
 const dt1 = document.getElementById("dt1");
 const dt2 = document.getElementById("dt2");
 const dt3 = document.getElementById("dt3");
@@ -16,25 +26,73 @@ const dt4 = document.getElementById("dt4");
 const dt5 = document.getElementById("dt5");
 const st = document.getElementById("particles-js")
 
-//Utility for ISO formating
-const formatBirthday = (year) => {
-  return `2023-06-20T12:00:00`;
+const formatDateData = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  
+  return `${year}, ${month}, ${day}`;
 };
 
-let year = new Date().getFullYear();
-let birthday = formatBirthday(year);
+const daysData = (totalSeconds) => {
+  return Math.floor(totalSeconds / 3600 / 24);
+};
 
-//Utility for time formating
+const minutesData = (totalSeconds) => {
+  return Math.floor((totalSeconds / 60) % 60);
+};
+
+const hoursData = (totalSeconds) => {
+  return Math.floor((totalSeconds / 3600) % 24);
+};
+
+const secondsData = (totalSeconds) => {
+  return Math.floor(totalSeconds % 60);
+};
+
+let initialDataValue;
+let sub1;
+let sub2;
+let sub3;
+let sub4;
+let sub5;
+let sub1name;
+let sub2name;
+let sub3name;
+let sub4name;
+let sub5name;
+
+fetch('schedule.json')
+  .then(response => response.json())
+  .then(data => {
+    initialDataValue = data[0].initial;
+    sub1 = data[0].schedules[0].date;
+    sub1name = data[0].schedules[0].subject;
+    sub2 = data[0].schedules[1].date;
+    sub2name = data[0].schedules[1].subject;
+    sub3 = data[0].schedules[2].date;
+    sub3name = data[0].schedules[2].subject;
+    sub4 = data[0].schedules[3].date;
+    sub4name = data[0].schedules[3].subject;
+    sub5 = data[0].schedules[4].date;
+    sub5name = data[0].schedules[4].subject;
+  })
+  .catch(error => {
+    console.error('Error loading the schedule:', error);
+  });
+
+let year = new Date().getFullYear();
+
 const formatTime = (time) => {
   return time < 10 ? `0${time}` : time;
 };
 
 const countdown = () => {
   const currentDate = new Date();
-  let targetDate = new Date(birthday);
+  let targetDate = new Date(initialDataValue);
   let remainingTime = targetDate - currentDate;
 
-  //Reset year if birthday passed and check if party time
   if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       labelElement.innerHTML = "PLEASE BE CAUTION ! EXAM IS UNDERWAY";
@@ -52,93 +110,45 @@ const countdown = () => {
     }
   }
 
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
-
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement.innerHTML = formatTime(days);
-  hoursElement.innerHTML = formatTime(hours);
-  minutesElement.innerHTML = formatTime(minutes);
-  secondsElement.innerHTML = formatTime(seconds);
-
-  
+  daysElement.innerHTML = formatTime(daysData(totalSeconds));
+  hoursElement.innerHTML = formatTime(hoursData(totalSeconds));
+  minutesElement.innerHTML = formatTime(minutesData(totalSeconds));
+  secondsElement.innerHTML = formatTime(secondsData(totalSeconds));
 };
 
-
-
-
-//Initial countdown
 countdown();
-
-//Call countdown every second
 setInterval(countdown, 1000);
 
 
-// Theory of Computation //
-
-
-const formatExamdate = (year) => {
-  return `2023-06-20T12:00:00`;
-};
-
-let year1 = new Date().getFullYear();
-let examdate1 = formatExamdate(year);
-
-
-const formatTime1 = (time) => {
-  return time < 10 ? `0${time}` : time;
-};
+// Subject 1 //
 
 const countdown1 = () => {
   const currentDate = new Date();
-  let targetDate = new Date(examdate1);
+  let targetDate = new Date(sub1);
   let remainingTime = targetDate - currentDate;
 
- 
-
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
 
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement1.innerHTML = formatTime1(days) + " Days ";
+  daysElement1.innerHTML = formatTime(daysData(totalSeconds)) + " Days ";
 
   
-  if (formatTime1(days) <= 2) {
-    daysElement1.innerHTML = formatTime1(days) + " Days";
+  if (formatTime(daysData(totalSeconds)) <= 2) {
+    daysElement1.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
     dt1.classList.add("tester");
     
   }
 
-  if (formatTime1(days) <= 0 ) {
-    daysElement1.innerHTML = formatTime1(hours) + " Hr " + formatTime1(minutes) + " Min " + formatTime1(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 ) {
+    daysElement1.innerHTML = formatTime(hoursData(totalSeconds)) + " Hr " + formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt1.classList.add("tester2");
   }
 
-  if (formatTime1(days) <= 0 && formatTime1(hours) <= 0){
-    daysElement1.innerHTML = formatTime1(minutes) + " Min " + formatTime1(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
+    daysElement1.innerHTML = formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt1.classList.add("tester2");
   }
 
-
-  
-
-   //Reset year if birthday passed and check if party time
    if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement1.innerHTML = "Finished";
@@ -160,62 +170,33 @@ setInterval(countdown1, 1000);
 
 
 
-// Computer Networks ///
-
-
-const formatExamdate1 = (year) => {
-  return `2023-06-23T12:00:00`;
-};
-
-let year2 = new Date().getFullYear();
-let examdate2 = formatExamdate1(year);
-
-
-const formatTime2 = (time) => {
-  return time < 10 ? `0${time}` : time;
-};
+// Subject 2 ///
 
 const countdown2 = () => {
   const currentDate = new Date();
-  let targetDate = new Date(examdate2);
+  let targetDate = new Date(sub2);
   let remainingTime = targetDate - currentDate;
-
-  
-
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
 
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement2.innerHTML = formatTime2(days) + " Days";
+  daysElement2.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
 
   
-  if (formatTime2(days) <= 2) {
-    daysElement2.innerHTML = formatTime2(days) + " Days";
+  if (formatTime(daysData(totalSeconds)) <= 2) {
+    daysElement2.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
     dt2.classList.add("tester");
     
   }
 
-  if (formatTime2(days) <= 0 ) {
-    daysElement2.innerHTML = formatTime2(hours) + " Hr " + formatTime2(minutes) + " Min " + formatTime2(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 ) {
+    daysElement2.innerHTML = formatTime(hoursData(totalSeconds)) + " Hr " + formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt2.classList.add("tester2");
   }
 
-  if (formatTime2(days) <= 0 && formatTime2(hours) <= 0){
-    daysElement2.innerHTML = formatTime2(minutes) + " Min " + formatTime2(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
+    daysElement2.innerHTML = formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt2.classList.add("tester2");
   }
 
-  
-
-  //Reset year if birthday passed and check if party time
   if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement2.innerHTML = "Finished";
@@ -236,61 +217,35 @@ countdown2();
 setInterval(countdown2, 1000);
 
 
-// Operating Systems ///
+// Subject 3 ///
 
-const formatExamdate2 = (year) => {
-  return `2023-06-26T12:00:00`;
-};
-
-let year3 = new Date().getFullYear();
-let examdate3 = formatExamdate2(year);
-
-
-const formatTime3 = (time) => {
-  return time < 10 ? `0${time}` : time;
-};
 
 const countdown3 = () => {
   const currentDate = new Date();
-  let targetDate = new Date(examdate3);
+  let targetDate = new Date(sub3);
   let remainingTime = targetDate - currentDate;
 
-  
-
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
 
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement3.innerHTML = formatTime3(days) + " Days";
+  daysElement3.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
 
   
-  if (formatTime3(days) <= 2) {
-    daysElement3.innerHTML = formatTime3(days) + " Days";
+  if (formatTime(daysData(totalSeconds)) <= 2) {
+    daysElement3.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
     dt3.classList.add("tester");
     
   }
 
-  if (formatTime3(days) <= 0 ) {
-    daysElement3.innerHTML = formatTime3(hours) + " Hr " + formatTime3(minutes) + " Min " + formatTime3(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 ) {
+    daysElement3.innerHTML = formatTime(hoursData(totalSeconds)) + " Hr " + formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt3.classList.add("tester2");
   }
 
-  if (formatTime3(days) <= 0 && formatTime3(hours) <= 0){
-    daysElement3.innerHTML = formatTime3(minutes) + " Min " + formatTime3(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
+    daysElement3.innerHTML = formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt3.classList.add("tester2");
   }
 
-  
-
-  //Reset year if birthday passed and check if party time
   if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement3.innerHTML = "Finished";
@@ -311,61 +266,34 @@ countdown3();
 setInterval(countdown3, 1000);
 
 
-// Database Management System //
-
-const formatExamdate3 = (year) => {
-  return `2023-06-29T12:00:00`;
-};
-
-let year4 = new Date().getFullYear();
-let examdate4 = formatExamdate3(year);
-
-
-const formatTime4 = (time) => {
-  return time < 10 ? `0${time}` : time;
-};
+// Subject 4 //
 
 const countdown4 = () => {
   const currentDate = new Date();
-  let targetDate = new Date(examdate4);
+  let targetDate = new Date(sub4);
   let remainingTime = targetDate - currentDate;
 
-  
-
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
 
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement4.innerHTML = formatTime4(days) + " Days";
+  daysElement4.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
 
   
-  if (formatTime4(days) <= 2) {
-    daysElement4.innerHTML = formatTime4(days) + " Days";
+  if (formatTime(daysData(totalSeconds)) <= 2) {
+    daysElement4.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
     dt4.classList.add("tester");
     
   }
 
-  if (formatTime4(days) <= 0 ) {
-    daysElement4.innerHTML = formatTime4(hours) + " Hr " + formatTime4(minutes) + " Min " + formatTime4(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 ) {
+    daysElement4.innerHTML = formatTime(hoursData(totalSeconds)) + " Hr " + formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt4.classList.add("tester2");
   }
 
-  if (formatTime4(days) <= 0 && formatTime4(hours) <= 0){
-    daysElement4.innerHTML = formatTime4(minutes) + " Min " + formatTime4(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
+    daysElement4.innerHTML = formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt4.classList.add("tester2");
   }
 
-  
-
-  //Reset year if birthday passed and check if party time
   if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement4.innerHTML = "Finished";
@@ -386,61 +314,36 @@ countdown4();
 setInterval(countdown4, 1000);
 
 
-// Artificial Intelligence //
-
-const formatExamdate4 = (year) => {
-  return `2023-07-02T12:00:00`;
-};
-
-let year5 = new Date().getFullYear();
-let examdate5 = formatExamdate4(year);
-
-
-const formatTime5 = (time) => {
-  return time < 10 ? `0${time}` : time;
-};
+// Subject 5 //
 
 const countdown5 = () => {
   const currentDate = new Date();
-  let targetDate = new Date(examdate5);
+  let targetDate = new Date(sub5);
   let remainingTime = targetDate - currentDate;
 
-  
-
-  //Total remaining time in seconds;
   const totalSeconds = Math.floor(remainingTime / 1000);
 
-  //Get remaining days
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  //Get remaining hours
-  const minutes = Math.floor((totalSeconds / 60) % 60);
-  //Get remaining minutes
-  const hours = Math.floor((totalSeconds / 3600) % 24);
-  //Get remaining seconds
-  const seconds = Math.floor(totalSeconds % 60);
-
-  daysElement5.innerHTML = formatTime5(days) + " Days";
+  daysElement5.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
 
 
-  if (formatTime5(days) <= 2) {
-    daysElement5.innerHTML = formatTime5(days) + " Days";
+  if (formatTime(daysData(totalSeconds)) <= 2) {
+    daysElement5.innerHTML = formatTime(daysData(totalSeconds)) + " Days";
     dt5.classList.add("tester");
     
   }
 
-  if (formatTime5(days) <= 0 ) {
-    daysElement5.innerHTML = formatTime5(hours) + " Hr " + formatTime5(minutes) + " Min " + formatTime5(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 ) {
+    daysElement5.innerHTML = formatTime(hoursData(totalSeconds)) + " Hr " + formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt5.classList.add("tester2");
     
   }
 
-  if (formatTime5(days) <= 0 && formatTime5(hours) <= 0){
-    daysElement5.innerHTML = formatTime5(minutes) + " Min " + formatTime5(seconds) + " Sec";
+  if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
+    daysElement5.innerHTML = formatTime(minutesData(totalSeconds)) + " Min " + formatTime(secondsData(totalSeconds)) + " Sec";
     dt5.classList.add("tester2");
     
   }
 
-  //Reset year if birthday passed and check if party time
   if (remainingTime <= 0) {
     if (currentDate.getDay() === targetDate.getDay()) {
       daysElement5.innerHTML = "Finished";
@@ -450,11 +353,7 @@ const countdown5 = () => {
       daysElement5.innerHTML = "Finished";
       labelElement.innerHTML = "WHY ARE WE STILL HERE? JUST TO SUFFER?";    
     }
-  }
-
-  
-
-  
+  } 
 };
 
 //Initial countdown
@@ -541,5 +440,28 @@ fetch('https://results.bimal1412.com.np/tunotice')
       .catch(error => {
         console.log('Error fetching JSON:', error);
       });
+
+const nepali_data = (sub) => {
+  const formattedDate = formatDateData(sub);
+  const nepalidata = new NepaliDate(new Date(formattedDate));
+  const formatnepali = nepalidata.format('YYYY MMMM DD , ddd');
+  return formatnepali;
+};
+
+function fill_data() {
+  subjectname1.innerHTML = sub1name;
+  subjectdate1.innerHTML = nepali_data(sub1);
+  subjectname2.innerHTML = sub2name;
+  subjectdate2.innerHTML = nepali_data(sub2);
+  subjectname3.innerHTML = sub3name;
+  subjectdate3.innerHTML = nepali_data(sub3);
+  subjectname4.innerHTML = sub4name;
+  subjectdate4.innerHTML = nepali_data(sub4);
+  subjectname5.innerHTML = sub5name;
+  subjectdate5.innerHTML = nepali_data(sub5);
+}
+
+setInterval(fill_data, 1000);
+
 
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
