@@ -1,27 +1,27 @@
 [ 
 {
     "title" : "CSIT 1st Sem",
-    "initial" : "2022-06-20T12:00:00",
+    "initial" : "2023-06-06T12:00:00",
     "schedules" : [
         {
             "subject": "Introduction to IT",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-06T12:00:00"
         },
         {
             "subject": "C Programming",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-09T12:00:00"
         },
         {
             "subject": "Digital Logics",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-12T12:00:00"
         },
         {
             "subject": "Mathematics I",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-15T12:00:00"
         },
         {
             "subject": "Physics",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-18T12:00:00"
         }
     ]
 },
