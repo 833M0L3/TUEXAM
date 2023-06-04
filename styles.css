@@ -90,6 +90,13 @@ body {
 
 }
 
+.stickybar {
+  position: absolute;
+  top: 10px;
+}
+
+
+
 .sidebarheader {
   display: inline-block;
   justify-content: center;
@@ -163,10 +170,6 @@ margin-bottom: 5px;
     transform: rotate();
     font-size: 20px;
     color: red;
-}
-
-.indreni {
-margin-top: 0.10px;
 }
 
 
