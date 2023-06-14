@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
       setCookie('currentsem', value);
       setCookie('currentsemname', name);
       dropdownButton.textContent = name;
+      schedule();
       location.reload();
     });
   });
@@ -132,7 +133,7 @@ function schedule() {
       console.error('Error loading the schedule:', error);
     });
 }
-setInterval(schedule, 1000);
+schedule();
 
 let year = new Date().getFullYear();
 
