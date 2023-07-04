@@ -136,31 +136,31 @@
 },
 {
     "title" : "CSIT 6th Sem",
-    "initial" : "2022-06-20T12:00:00",
+    "initial" : "2023-08-07T12:00:00",
     "schedules" : [
         {
             "subject": "Software Engineering",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-07T12:00:00"
         },
         {
             "subject": "Compiler Design and Construction",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-10T12:00:00"
         },
         {
             "subject": "E-Governance",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-13T12:00:00"
         },
         {
             "subject": "NET Centric Computing",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-16T12:00:00"
         },
         {
             "subject": "Technical Writing",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-20T12:00:00"
         },
         {
             "subject": "Elective II",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-08-23T12:00:00"
         }
     ]
 },
