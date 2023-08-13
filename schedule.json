@@ -54,27 +54,27 @@
 },
 {
     "title" : "CSIT 3rd Sem",
-    "initial" : "2022-06-20T12:00:00",
+    "initial" : "2023-09-29T12:00:00",
     "schedules" : [
         {
             "subject": "Datastructure and Algorithm",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-09-29T12:00:00"
         },
         {
             "subject": "Numerical Method",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-11-02T12:00:00"
         },
         {
             "subject": "Computer Architecture",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-11-05T12:00:00"
         },
         {
             "subject": "Computer Graphics",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-11-08T12:00:00"
         },
         {
             "subject": "Statistics II",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-11-11T12:00:00"
         }
     ]
 },

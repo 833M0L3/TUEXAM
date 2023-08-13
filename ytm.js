@@ -113,5 +113,3 @@ function YTIME(time) {
 
 setInterval(Titledata, 1000);
 player.setLoop(true);
-
-console.log(player)
