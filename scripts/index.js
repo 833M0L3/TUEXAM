@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const name = this.textContent;
       currentsem = value;
       currentsemname = name;
-      setCookie('currentsem', value);
-      setCookie('currentsemname', name);
+      setCookie('currentsem', value, 365);
+      setCookie('currentsemname', name, 365);
       dropdownButton.textContent = name;
       schedule();
       location.reload();
