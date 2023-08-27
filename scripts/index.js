@@ -40,17 +40,20 @@ let currentsem = getCookie('currentsem');
 let currentsemname = getCookie('currentsemname');
 
 if (currentsem === null) {
-  currentsem = '3';
-  setCookie('currentsem', currentsem);
+  currentsem = '2';
+  setCookie('currentsem', currentsem, 365);
 }
 
 if (currentsemname === null) {
-  currentsemname = '4th';
-  setCookie('currentsemname', currentsemname);
+  currentsemname = '3rd';
+  setCookie('currentsemname', currentsemname, 365);
 }
 
-function setCookie(name, value) {
-  document.cookie = `${name}=${value}`;
+function setCookie(name, value, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = `${name}=${value}`+ ";" + expires;
 }
 
 document.querySelector('.dropdown-toggle').textContent = currentsemname;
