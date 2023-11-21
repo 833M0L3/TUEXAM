@@ -110,27 +110,27 @@
     "schedules" : [
         {
             "subject": "Design and Analysisc of Algorithms",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-12-17T12:00:00"
         },
         {
             "subject": "System Analysis and Design",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-12-20T12:00:00"
         },
         {
             "subject": "Cryptography",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-12-24T12:00:00"
         },
         {
             "subject": "Simulation and Modeling",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-12-27T12:00:00"
         },
         {
             "subject": "Web Technology",
-            "date": "2022-06-20T12:00:00"
+            "date": "2023-06-29T12:00:00"
         },
         {
             "subject": "Elective I",
-            "date": "2022-06-20T12:00:00"
+            "date": "2024-01-01T12:00:00"
         }
     ]
 },

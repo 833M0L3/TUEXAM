@@ -40,12 +40,12 @@ let currentsem = getCookie('currentsem');
 let currentsemname = getCookie('currentsemname');
 
 if (currentsem === null) {
-  currentsem = '2';
+  currentsem = '4';
   setCookie('currentsem', currentsem, 365);
 }
 
 if (currentsemname === null) {
-  currentsemname = '3rd';
+  currentsemname = '5th';
   setCookie('currentsemname', currentsemname, 365);
 }
 
