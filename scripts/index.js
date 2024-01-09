@@ -92,7 +92,6 @@ async function schedule() {
       let subjectname = item.subject;
       let currentDate = new Date();
       let remainingTime = targetDate - currentDate;
-      console.log(subjectname);
       if (remainingTime > 0) {
        labelElement.innerHTML = `Upcoming Exam : <br>${subjectname}`;
        if (rowcount == 0) {
@@ -103,7 +102,6 @@ async function schedule() {
        }
        changealert(targetDate,rowid);
        runloopfront(targetDate);
-       console.log(rowcount);
        break;
       }
       rowcount = rowcount + 1;
@@ -263,7 +261,6 @@ function frontcountdown (initialDataValue) {
  const currentDate = new Date();
  let targetDate = new Date(initialDataValue);
  let remainingTime = targetDate - currentDate;
- console.log(initialDataValue)
 
  const totalSeconds = Math.floor(remainingTime / 1000);
  daysElement.innerHTML = formatTime(daysData(totalSeconds));
