@@ -326,5 +326,18 @@ fetch('https://results.bimal1412.com.np/tunotice')
         console.log('Error fetching JSON:', error);
       });
 
+// Dropdown arrow Animation
+let scrollDownElement = document.querySelector('.scrollDown');
+let originalPosition = window.scrollY;
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > originalPosition + 100) { //
+    scrollDownElement.classList.add('hidden');
+  } else {
+    scrollDownElement.classList.remove('hidden');
+  }
+});
+
+
 
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
