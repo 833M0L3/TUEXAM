@@ -170,23 +170,19 @@
     "schedules" : [
         {
             "subject": "Advanced JAVA Programming",
-            "date": "2022-06-20T12:00:00"
+            "date": "2024-02-09T12:00:00"
         },
         {
             "subject": "Data Warehousing and Data Mining",
-            "date": "2022-06-20T12:00:00"
+            "date": "2024-02-12T12:00:00"
         },
         {
             "subject": "Principles of Management",
-            "date": "2022-06-20T12:00:00"
-        },
-        {
-            "subject": "Project Work",
-            "date": "2022-06-20T12:00:00"
+            "date": "2024-02-15T12:00:00"
         },
         {
             "subject": "Elective III",
-            "date": "2022-06-20T12:00:00"
+            "date": "2024-02-18T12:00:00"
         }
     ]
 },
