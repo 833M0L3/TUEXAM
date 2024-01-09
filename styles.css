@@ -95,7 +95,9 @@ body {
   top: 10px;
 }
 
-
+.indreni {
+  margin: 30px;
+}
 
 .sidebarheader {
   display: inline-block;
