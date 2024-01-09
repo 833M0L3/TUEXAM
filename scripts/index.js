@@ -305,7 +305,7 @@ function w3_close() {
   div.classList.remove("visible");
 }
 
-fetch('https://results.bimal1412.com.np/tunotice')
+fetch('notices.json')
       .then(response => response.json())
       .then(data => {
         var sidebarList = document.getElementById("sidebar-list");
@@ -313,8 +313,8 @@ fetch('https://results.bimal1412.com.np/tunotice')
         data.forEach(item => {
           var listItem = document.createElement("li");
           var link = document.createElement("a");
-          link.href = item.pdf_link;
-          link.textContent = item.pdf_title;
+          link.href = item.link;
+          link.textContent = item.title;
           listItem.appendChild(link);
           sidebarList.appendChild(listItem);
         });
