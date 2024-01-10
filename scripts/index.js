@@ -22,12 +22,12 @@ let currentsem = getCookie('currentsem');
 let currentsemname = getCookie('currentsemname');
 
 if (currentsem === null) {
-  currentsem = '4';
+  currentsem = '6';
   setCookie('currentsem', currentsem, 365);
 }
 
 if (currentsemname === null) {
-  currentsemname = '5th';
+  currentsemname = '7th';
   setCookie('currentsemname', currentsemname, 365);
 }
 
@@ -100,7 +100,8 @@ async function schedule() {
        else{
         rowid = `dt${rowcount + 1}`;
        }
-       changealert(targetDate,rowid);
+       
+       changealert(targetDate,rowid,rowcount);
        runloopfront(targetDate);
        break;
       }
@@ -210,28 +211,57 @@ function countdown (subject,date,rowid,demo,intervalId) {
   };
 
  if (remainingTime <= 0) {
-  daysElement1.innerHTML = "Finished";
-  clearInterval(intervalId);
+  daysElement1.innerHTML = "Ongoing";
+  dt1.classList.add("tester2");
   };
+  if (remainingTime <= -10800000) {
+    daysElement1.innerHTML = "Finished";
+    dt1.classList.remove("tester2");
+    clearInterval(intervalId);
+ }
 };
 
+function checkTruth(rowcount) {
+  rowid = `dt${rowcount}`
+  cellid = document.getElementById(rowid);
+  if(cellid.classList.contains("tester2")) {
+    return true
+  } else {
+    return false
+  }
+}
 
-function changealert(date,rowid) {
+function changealert(date,rowid,rowcount) {
   const dt1 = document.getElementById(rowid);
   let targetDate = new Date(date);
   let remainingTime = targetDate - currentDate;
   const totalSeconds = Math.floor(remainingTime / 1000);
   if (formatTime(daysData(totalSeconds)) <= 2) {
-    dt1.classList.add("tester");
-     };
+    if (rowcount == 0) {
+      dt1.classList.add("tester")
+    }
+    else {
+      loopAlert(rowcount,"tester",dt1)
+    };
+  };
   
   if (formatTime(daysData(totalSeconds)) <= 0 ) {
-    dt1.classList.add("tester2");
+    if (rowcount == 0) {
+      dt1.classList.add("tester2");
+    }
+    else {
+      loopAlert(rowcount,"tester2",dt1)
     };
+  };
   
   if (formatTime(daysData(totalSeconds)) <= 0 && formatTime(hoursData(totalSeconds)) <= 0){
-   dt1.classList.add("tester2");
+    if (rowcount == 0) {
+      dt1.classList.add("tester2")
+    }
+    else {
+      loopAlert(rowcount,"tester2",dt1)
     };
+  };
 };
 
 function runloop(subject,date, rowid, demo) {
@@ -245,6 +275,17 @@ function runloopfront(initialDataValue) {
   frontcountdown(initialDataValue);
  }, 1000);
 };
+
+function loopAlert(rowcount,className,dt1) {
+  let intervalId = setInterval(function () {
+    if (checkTruth(rowcount)) {
+      dt1.classList.remove(className);
+      clearInterval(intervalId);
+    } else {
+      dt1.classList.add(className);
+    }
+  }, 100);
+}
 
 function stopLoop(intervalId) {
  clearInterval(intervalId);
