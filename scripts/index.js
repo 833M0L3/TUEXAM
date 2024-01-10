@@ -93,7 +93,7 @@ async function schedule() {
       let currentDate = new Date();
       let remainingTime = targetDate - currentDate;
       if (remainingTime > 0) {
-       labelElement.innerHTML = `Upcoming Exam : <br>${subjectname}`;
+       labelElement.innerHTML = `<div class="upexam">Upcoming Exam :</div>${subjectname}`;
        if (rowcount == 0) {
         rowid = "dt1"
        }
