@@ -2,6 +2,9 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import os
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 url = 'http://iost.tu.edu.np/notices'
 response = requests.get(url, verify=False)
@@ -9,10 +12,10 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 notices = []
 
-links = soup.find_all('div', class_='recent-post-wrapper shdow')
+links = soup.find_all('li' , class_="me-4")
 
 for link in links:
-    title = link.find('h5').text.strip()
+    title = link.find('a').text.strip()
     notice_link = link.find('a')['href'].strip()
 
     notice_data = {
