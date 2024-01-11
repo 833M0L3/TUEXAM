@@ -211,11 +211,11 @@ function countdown (subject,date,rowid,demo,intervalId) {
   };
 
  if (remainingTime <= 0) {
-  daysElement1.innerHTML = "Ongoing";
+  daysElement1.innerHTML = "Ongoing ⏰";
   dt1.classList.add("tester2");
   };
   if (remainingTime <= -10800000) {
-    daysElement1.innerHTML = "Finished";
+    daysElement1.innerHTML = "Finished ✅";
     dt1.classList.remove("tester2");
     clearInterval(intervalId);
  }
