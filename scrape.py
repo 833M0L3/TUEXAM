@@ -3,16 +3,27 @@ import requests
 import json
 import os
 import urllib3
+from requests.exceptions import ConnectTimeout
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 url = 'http://iost.tu.edu.np/notices'
-response = requests.get(url, verify=False)
+
+try:
+    response = requests.get(url, verify=False, timeout=10)
+    response.raise_for_status()
+except ConnectTimeout as e:
+    print(f"Error: Connection to {url} timed out.")
+    exit()
+except requests.exceptions.RequestException as e:
+    print(f"Error: {e}")
+    exit()
+
 soup = BeautifulSoup(response.text, 'html.parser')
 
 notices = []
 
-links = soup.find_all('li' , class_="me-4")
+links = soup.find_all('li', class_="me-4")
 
 for link in links:
     title = link.find('a').text.strip()
@@ -26,7 +37,6 @@ for link in links:
     notices.append(notice_data)
 
 output_file_path = 'notices.json'
-
 
 if os.path.exists(output_file_path):
     os.remove(output_file_path)
