@@ -20,6 +20,7 @@ function getCookie(name) {
 }
 let currentsem = getCookie('currentsem');
 let currentsemname = getCookie('currentsemname');
+let dateLang = getCookie('datelang');
 
 if (currentsem === null) {
   currentsem = '6';
@@ -29,6 +30,11 @@ if (currentsem === null) {
 if (currentsemname === null) {
   currentsemname = '7th';
   setCookie('currentsemname', currentsemname, 365);
+}
+
+if (dateLang === null) {
+  dateLang = 'np';
+  setCookie('datelang', dateLang, 365);
 }
 
 function setCookie(name, value, exdays) {
@@ -114,6 +120,40 @@ async function schedule() {
 
 schedule();
 
+function changedate() {
+
+  for (let i = 0; i < dataschedules[currentsem].schedules.length; i++) {
+    dateid = `sub${i + 1}-date`;
+    if (i === 0) {
+      dateid = "sub1-date";
+      }
+    date = dataschedules[currentsem].schedules[i].date;
+    cellloc = document.getElementById(dateid);
+
+    if (dateLang === "np") {
+      celldate = nepali_data(date)
+    } else {
+      celldate = eng_date(date)
+    }
+
+    cellloc.innerHTML = celldate       
+  };
+}
+
+function setNP () {
+  dateLang = 'np';
+  setCookie('datelang', dateLang, 365);
+  changedate();
+}
+
+function setEng () {
+  dateLang = 'eng';
+  setCookie('datelang', dateLang, 365);
+  changedate();
+}
+
+
+
 let year = new Date().getFullYear();
 
 
@@ -127,10 +167,16 @@ function appendRow(subject,date) {
 
  newRow.id = rowid;
 
+ if ( dateLang === "np" ) {
+  celldate = nepali_data(date)
+ } else {
+  celldate = eng_date(date)
+ }
+
  newRow.innerHTML = `
   <th scope="row">${tbody.rows.length + 1}</th>
   <td id="sub${tbody.rows.length + 1}">${subject}</td>
-  <td id="sub${tbody.rows.length + 1}-date">${nepali_data(date)}</td>
+  <td id="sub${tbody.rows.length + 1}-date">${celldate}</td>
   <td id="demo${tbody.rows.length + 1}"></td>
   `;
  tableBody.appendChild(newRow);
@@ -144,6 +190,22 @@ function formatDateData(dateString) {
 
  return `${year}, ${month}, ${day}`;
 };
+
+
+function eng_date(inputDateString) {
+  const inputDate = new Date(inputDateString);
+
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    weekday: 'long'
+  };
+
+  const formattedDate = inputDate.toLocaleDateString('en-US', options);
+
+  return formattedDate;
+}
 
 function top_nepali() {
   const formattedDAte = formatDateData(new Date());

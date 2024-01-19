@@ -361,3 +361,47 @@ h1 {
   font-family:'Times New Roman', Times, serif;
   margin-top: 10px;
 }
+
+#dateeng {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 2px;
+}
+
+#datenep {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: 2px;
+}
+
+.dateholder {
+  display: inline-block;
+  background-color: #5df59cb5;
+  box-shadow: #040404;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+#dateeng {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#dateeng:active {
+  transform: rotate();
+  width: 10px;
+  height: 10px;
+}
+
+#datenep {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#datenep:active {
+  transform: rotate();
+  width: 10px;
+  height: 10px;
+}
