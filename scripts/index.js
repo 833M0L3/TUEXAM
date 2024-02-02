@@ -74,7 +74,7 @@ async function schedule() {
     const data = await response.json();
     dataschedules = data;
     for (const item of dataschedules[currentsem].schedules) {
-      appendRow(item.subject,item.date);
+      appendRow(item.subject,item.date,item.code);
     };
     for (let i = 0; i < dataschedules[currentsem].schedules.length; i++) {
       demo = `demo${i + 1}`;
@@ -157,7 +157,7 @@ function setEng () {
 let year = new Date().getFullYear();
 
 
-function appendRow(subject,date) {
+function appendRow(subject,date,subcode) {
 
  var tbody = document.getElementById('tableBody');
 
@@ -174,7 +174,7 @@ function appendRow(subject,date) {
  }
 
  newRow.innerHTML = `
-  <th scope="row">${tbody.rows.length + 1}</th>
+  <th scope="row">${subcode}</th>
   <td id="sub${tbody.rows.length + 1}">${subject}</td>
   <td id="sub${tbody.rows.length + 1}-date">${celldate}</td>
   <td id="demo${tbody.rows.length + 1}"></td>

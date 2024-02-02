@@ -5,23 +5,28 @@
     "schedules" : [
         {
             "subject": "Introduction to IT",
-            "date": "2023-06-06T12:00:00"
+            "date": "2023-06-06T12:00:00",
+            "code": "CSC109"
         },
         {
             "subject": "C Programming",
-            "date": "2023-06-09T12:00:00"
+            "date": "2023-06-09T12:00:00",
+            "code": "CSC110"
         },
         {
             "subject": "Digital Logics",
-            "date": "2023-06-12T12:00:00"
+            "date": "2023-06-12T12:00:00",
+            "code": "CSC111"
         },
         {
             "subject": "Mathematics I",
-            "date": "2023-06-15T12:00:00"
+            "date": "2023-06-15T12:00:00",
+            "code": "MTH112"
         },
         {
             "subject": "Physics",
-            "date": "2023-06-18T12:00:00"
+            "date": "2023-06-18T12:00:00",
+            "code": "PHY113"
         }
     ]
 },
@@ -31,23 +36,28 @@
     "schedules" : [
         {
             "subject": "Discrete Structure",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC160"
         },
         {
             "subject": "Object Oriented Programming",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC161"
         },
         {
             "subject": "Microprocessor",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC162"
         },
         {
             "subject": "Mathematics II",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "MTH163"
         },
         {
             "subject": "Statistics I",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "STA164"
         }
     ]
 
@@ -58,23 +68,29 @@
     "schedules" : [
         {
             "subject": "Datastructure and Algorithm",
-            "date": "2023-09-29T12:00:00"
+            "date": "2023-09-29T12:00:00",
+            "code" : "CSC206"
         },
         {
             "subject": "Numerical Method",
-            "date": "2023-10-02T12:00:00"
+            "date": "2023-10-02T12:00:00",
+            "code": "CSC207"
         },
         {
             "subject": "Computer Architecture",
-            "date": "2023-10-05T12:00:00"
+            "date": "2023-10-05T12:00:00",
+            "code": "CSC208"
         },
         {
             "subject": "Computer Graphics",
-            "date": "2023-10-08T12:00:00"
+            "date": "2023-10-08T12:00:00",
+            "code": "CSC209"
+
         },
         {
             "subject": "Statistics II",
-            "date": "2023-10-11T12:00:00"
+            "date": "2023-10-11T12:00:00",
+            "code": "CSC111"
         }
     ]
 },
@@ -84,22 +100,28 @@
     "schedules" : [
         {
         "subject" : "Theory of Computation",
-        "date" : "2023-06-20T12:00:00" },
+        "date" : "2023-06-20T12:00:00",
+        "code" : "CSC257"
+        },
         {
         "subject" : "Computer Networks",
-        "date" : "2023-06-23T12:00:00"
+        "date" : "2023-06-23T12:00:00",
+        "code" : "CSC258"
         },
         {
         "subject" : "Operating Systems",
-        "date" : "2023-06-26T12:00:00"
+        "date" : "2023-06-26T12:00:00",
+        "code" : "CSC259"
         },
         {
         "subject" : "Database Management System",
-        "date" : "2023-06-29T12:00:00"
+        "date" : "2023-06-29T12:00:00",
+        "code" : "CSC260"
         },
         {
         "subject" : "Artificial Intelligence",
-        "date" : "2023-07-02T12:00:00"
+        "date" : "2023-07-02T12:00:00",
+        "code" : "CSC261"
         }
        ]
 
@@ -110,27 +132,33 @@
     "schedules" : [
         {
             "subject": "Design and Analysisc of Algorithms",
-            "date": "2023-12-17T12:00:00"
+            "date": "2023-12-17T12:00:00",
+            "code": "CSC314"
         },
         {
             "subject": "System Analysis and Design",
-            "date": "2023-12-20T12:00:00"
+            "date": "2023-12-20T12:00:00",
+            "code": "CSC315"
         },
         {
             "subject": "Cryptography",
-            "date": "2023-12-24T12:00:00"
+            "date": "2023-12-24T12:00:00",
+            "code": "CSC316"
         },
         {
             "subject": "Simulation and Modeling",
-            "date": "2023-12-27T12:00:00"
+            "date": "2023-12-27T12:00:00",
+            "code": "CSC317"
         },
         {
             "subject": "Web Technology",
-            "date": "2023-12-29T12:00:00"
+            "date": "2023-12-29T12:00:00",
+            "code": "CSC318"
         },
         {
             "subject": "Elective I",
-            "date": "2024-01-01T12:00:00"
+            "date": "2024-01-01T12:00:00",
+            "code": "CSC3XX"
         }
     ]
 },
@@ -140,27 +168,33 @@
     "schedules" : [
         {
             "subject": "Software Engineering",
-            "date": "2023-01-10T12:00:00"
+            "date": "2023-01-10T12:00:00",
+            "code": "CSC364"
         },
         {
             "subject": "Compiler Design and Construction",
-            "date": "2023-01-11T12:00:00"
+            "date": "2023-01-11T12:00:00",
+            "code": "CSC365"
         },
         {
             "subject": "E-Governance",
-            "date": "2023-08-13T12:00:00"
+            "date": "2023-08-13T12:00:00",
+            "code" : "CSC366"
         },
         {
             "subject": "NET Centric Computing",
-            "date": "2023-08-16T12:00:00"
+            "date": "2023-08-16T12:00:00",
+            "code": "CSC367"
         },
         {
             "subject": "Technical Writing",
-            "date": "2023-08-20T12:00:00"
+            "date": "2023-08-20T12:00:00",
+            "code": "CSC368"
         },
         {
             "subject": "Elective II",
-            "date": "2023-01-10T12:00:00"
+            "date": "2023-01-10T12:00:00",
+            "code": "CSC3XX"
         }
     ]
 },
@@ -170,19 +204,23 @@
     "schedules" : [
         {
             "subject": "Advanced JAVA Programming",
-            "date": "2024-02-09T12:00:00"
+            "date": "2024-02-09T12:00:00",
+            "code": "CSC409"
         },
         {
             "subject": "Data Warehousing and Data Mining",
-            "date": "2024-02-12T12:00:00"
+            "date": "2024-02-12T12:00:00",
+            "code": "CSC410"
         },
         {
             "subject": "Principles of Management",
-            "date": "2024-02-15T12:00:00"
+            "date": "2024-02-15T12:00:00",
+            "code": "MGT411"
         },
         {
             "subject": "Elective III",
-            "date": "2024-02-18T12:00:00"
+            "date": "2024-02-18T12:00:00",
+            "code": "CSC4XX"
         }
     ]
 },
@@ -192,23 +230,28 @@
     "schedules" : [
         {
             "subject": "Advanced Database",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC461"
         },
         {
             "subject": "Internship",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC462"
         },
         {
             "subject": "Elective IV",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC4XX"
         },
         {
             "subject": "Elective V",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC4XX"
         },
         {
             "subject": "Elective VI",
-            "date": "2022-06-20T12:00:00"
+            "date": "2022-06-20T12:00:00",
+            "code": "CSC4XX"
         }
     ]
 }
