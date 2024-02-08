@@ -91,7 +91,7 @@ async function schedule() {
        finalday(date);
       };
      
-      runloop(subject,date, rowid, demo);
+      runloop(date, rowid, demo);
     };
     for (const item of dataschedules[currentsem].schedules) {
       let targetDate = new Date(item.date);
@@ -245,11 +245,9 @@ const secondsData = (totalSeconds) => {
  return Math.floor(totalSeconds % 60);
 };
 
-const currentDate = new Date();
-
-
 // Countdown updates of the subject days remaining tables 
-function countdown (subject,date,rowid,demo,intervalId) {
+function countdown (date,rowid,demo,intervalId) {
+ const currentDate = new Date();
  const daysElement1 = document.getElementById(demo);
  const dt1 = document.getElementById(rowid);
  let targetDate = new Date(date);
@@ -294,6 +292,7 @@ function checkTruth(rowcount) {
 }
 
 function changealert(date,rowid,rowcount) {
+  const currentDate = new Date();
   const dt1 = document.getElementById(rowid);
   let targetDate = new Date(date);
   let remainingTime = targetDate - currentDate;
@@ -326,9 +325,9 @@ function changealert(date,rowid,rowcount) {
   };
 };
 
-function runloop(subject,date, rowid, demo) {
+function runloop(date, rowid, demo) {
  const intervalId = setInterval(function () {
-  countdown(subject,date, rowid, demo, intervalId);
+  countdown(date, rowid, demo, intervalId);
  }, 1000);
 };
 
@@ -349,9 +348,6 @@ function loopAlert(rowcount,className,dt1) {
   }, 100);
 }
 
-function stopLoop(intervalId) {
- clearInterval(intervalId);
-};
 
 function finalday(finaldate) {
  if (new Date() >= new Date(finaldate)) {
