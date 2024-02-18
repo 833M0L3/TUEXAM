@@ -81,7 +81,7 @@ async function schedule() {
       rowid = `dt${i + 1}`;
       date = dataschedules[currentsem].schedules[i].date;
       initial = dataschedules[currentsem].initial;
-      subject = dataschedules[currentsem].subject;
+      subject = dataschedules[currentsem].schedules[i];
      
       if (i === 0) {
        demo = "demo1";
@@ -91,7 +91,7 @@ async function schedule() {
        finalday(date);
       };
      
-      runloop(date, rowid, demo);
+      runloop(date, rowid, demo, subject);
     };
     for (const item of dataschedules[currentsem].schedules) {
       let targetDate = new Date(item.date);
@@ -151,6 +151,12 @@ function setEng () {
   setCookie('datelang', dateLang, 365);
   changedate();
 }
+
+function lastcheck(position) {
+  cord = dataschedules[currentsem].schedules
+  return cord.indexOf(position) === cord.length - 1;
+}
+
 
 
 
@@ -246,7 +252,7 @@ const secondsData = (totalSeconds) => {
 };
 
 // Countdown updates of the subject days remaining tables 
-function countdown (date,rowid,demo,intervalId) {
+function countdown (subject,date,rowid,demo,intervalId) {
  const currentDate = new Date();
  const daysElement1 = document.getElementById(demo);
  const dt1 = document.getElementById(rowid);
@@ -273,10 +279,18 @@ function countdown (date,rowid,demo,intervalId) {
  if (remainingTime <= 0) {
   daysElement1.innerHTML = "Ongoing ⏰";
   dt1.classList.add("tester2");
+  if (new Date() > new Date(date) && lastcheck(subject)) {
+    labelElement.innerHTML = "Final day is here ! Keta haru exam didai xan";
+    countdownElement.style.display = "none";
+}
   };
   if (remainingTime <= -10800000) {
     daysElement1.innerHTML = "Finished ✅";
     dt1.classList.remove("tester2");
+    if (new Date() > new Date(date) && lastcheck(subject)) {
+      labelElement.innerHTML = "Why are we here? Just to suffer";
+      countdownElement.style.display = "none";
+    }
     clearInterval(intervalId);
  }
 };
@@ -325,9 +339,9 @@ function changealert(date,rowid,rowcount) {
   };
 };
 
-function runloop(date, rowid, demo) {
+function runloop(date, rowid, demo, subject) {
  const intervalId = setInterval(function () {
-  countdown(date, rowid, demo, intervalId);
+  countdown(subject, date, rowid, demo, intervalId);
  }, 1000);
 };
 
