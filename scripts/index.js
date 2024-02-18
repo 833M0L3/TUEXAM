@@ -288,7 +288,7 @@ function countdown (subject,date,rowid,demo,intervalId) {
     daysElement1.innerHTML = "Finished ✅";
     dt1.classList.remove("tester2");
     if (new Date() > new Date(date) && lastcheck(subject)) {
-      labelElement.innerHTML = "Why are we here? Just to suffer";
+      labelElement.innerHTML = "WHY ARE WE STILL HERE? JUST TO SUFFER?";
       countdownElement.style.display = "none";
     }
     clearInterval(intervalId);
