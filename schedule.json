@@ -64,32 +64,32 @@
 },
 {
     "title" : "CSIT 3rd Sem",
-    "initial" : "2023-09-29T12:00:00",
+    "initial" : "2024-05-21T12:00:00",
     "schedules" : [
         {
             "subject": "Datastructure and Algorithm",
-            "date": "2023-09-29T12:00:00",
+            "date": "2024-05-21T12:00:00",
             "code" : "CSC206"
         },
         {
             "subject": "Numerical Method",
-            "date": "2023-10-02T12:00:00",
+            "date": "2024-05-24T12:00:00",
             "code": "CSC207"
         },
         {
             "subject": "Computer Architecture",
-            "date": "2023-10-05T12:00:00",
+            "date": "2024-05-27T12:00:00",
             "code": "CSC208"
         },
         {
             "subject": "Computer Graphics",
-            "date": "2023-10-08T12:00:00",
+            "date": "2024-05-30T12:00:00",
             "code": "CSC209"
 
         },
         {
             "subject": "Statistics II",
-            "date": "2023-10-11T12:00:00",
+            "date": "2024-06-02T12:00:00",
             "code": "CSC111"
         }
     ]

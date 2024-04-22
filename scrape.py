@@ -7,7 +7,7 @@ from requests.exceptions import ConnectTimeout
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-url = 'http://iost.tu.edu.np/notices'
+url = 'https://iost.tu.edu.np/notices'
 
 try:
     response = requests.get(url, verify=False, timeout=10)
