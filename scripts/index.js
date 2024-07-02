@@ -86,11 +86,8 @@ async function schedule() {
       if (i === 0) {
        demo = "demo1";
        rowid = "dt1";
-       }
-      if (i === dataschedules[0].schedules.length - 1){
-       finalday(date);
-      };
-     
+       };
+    
       runloop(date, rowid, demo, subject);
     };
     for (const item of dataschedules[currentsem].schedules) {
