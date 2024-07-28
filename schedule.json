@@ -128,36 +128,36 @@
 },
 {
     "title" : "CSIT 5th Sem",
-    "initial" : "2023-12-17T12:00:00",
+    "initial" : "2024-09-13T12:00:00",
     "schedules" : [
         {
             "subject": "Design and Analysisc of Algorithms",
-            "date": "2023-12-17T12:00:00",
+            "date": "2024-09-13T12:00:00",
             "code": "CSC314"
         },
         {
             "subject": "System Analysis and Design",
-            "date": "2023-12-20T12:00:00",
+            "date": "2024-09-16T12:00:00",
             "code": "CSC315"
         },
         {
             "subject": "Cryptography",
-            "date": "2023-12-24T12:00:00",
+            "date": "2024-09-20T12:00:00",
             "code": "CSC316"
         },
         {
             "subject": "Simulation and Modeling",
-            "date": "2023-12-27T12:00:00",
+            "date": "2024-09-24T12:00:00",
             "code": "CSC317"
         },
         {
             "subject": "Web Technology",
-            "date": "2023-12-29T12:00:00",
+            "date": "2024-09-27T12:00:00",
             "code": "CSC318"
         },
         {
             "subject": "Elective I",
-            "date": "2024-01-01T12:00:00",
+            "date": "2024-09-30T12:00:00",
             "code": "CSC3XX"
         }
     ]
