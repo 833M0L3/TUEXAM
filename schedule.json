@@ -96,31 +96,31 @@
 },
 {
     "title" : "CSIT 4th Sem",
-    "initial" : "2024-03-19T12:00:00",
+    "initial" : "2024-11-29T12:00:00",
     "schedules" : [
         {
         "subject" : "Theory of Computation",
-        "date" : "2024-03-19T12:00:00",
+        "date" : "2024-11-29T12:00:00",
         "code" : "CSC257"
         },
         {
         "subject" : "Computer Networks",
-        "date" : "2024-03-22T12:00:00",
+        "date" : "2024-12-02T12:00:00",
         "code" : "CSC258"
         },
         {
         "subject" : "Operating Systems",
-        "date" : "2024-03-26T12:00:00",
+        "date" : "2024-12-05T12:00:00",
         "code" : "CSC259"
         },
         {
         "subject" : "Database Management System",
-        "date" : "2024-03-29T12:00:00",
+        "date" : "2024-12-08T12:00:00",
         "code" : "CSC260"
         },
         {
         "subject" : "Artificial Intelligence",
-        "date" : "2024-04-01T12:00:00",
+        "date" : "2024-12-11T12:00:00",
         "code" : "CSC261"
         }
        ]
