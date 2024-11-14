@@ -405,3 +405,66 @@ h1 {
   width: 10px;
   height: 10px;
 }
+
+.controls {
+  position: relative;
+}
+
+#volumeButton {
+  position: relative; /* Sets the button as a positioning anchor */
+  cursor: pointer;
+}
+
+.volume-popup {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below the controls */
+  left: 50%; /* Centers the popup horizontally relative to the button */
+  transform: translateX(-50%); /* Centers the popup based on its width */
+  width: 100%; /* Set to 100% width to match controls */
+  background-color: #14141494;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensures it appears on top */
+}
+
+#volumeSlider {
+  width: 100%; /* Adjust slider width */
+  height: 8px; /* Adjust height of the horizontal slider */
+  background: #304f3e00;
+  border-radius: 5px;
+  outline: none;
+}
+
+#volumeSlider::-webkit-slider-runnable-track {
+  background: #55555500;
+  border-radius: 5px;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #888;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#volumeSlider::-moz-range-track {
+  background: #555;
+  border-radius: 5px;
+}
+
+#volumeSlider::-moz-range-thumb {
+  background: #888;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

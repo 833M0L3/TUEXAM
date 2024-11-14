@@ -47,6 +47,32 @@ function onPlayerReady(event) {
   event.target.setVolume(20);
 }
 
+
+// Toggle popup visibility on volume button click
+document.getElementById('volumeButton').addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevents the event from bubbling up
+  const volumePopup = document.getElementById('volumePopup');
+  volumePopup.style.display = volumePopup.style.display === 'none' || volumePopup.style.display === '' ? 'block' : 'none';
+});
+
+// Update player volume based on slider
+document.getElementById('volumeSlider').addEventListener('input', function () {
+  let volume = parseInt(this.value);
+  player.setVolume(volume); // Make sure player object is defined and can accept setVolume method
+});
+
+// Close popup when clicking outside of it
+document.addEventListener('click', function(event) {
+  const volumePopup = document.getElementById('volumePopup');
+  const volumeButton = document.getElementById('volumeButton');
+  if (!volumePopup.contains(event.target) && event.target !== volumeButton) {
+    volumePopup.style.display = 'none';
+  }
+});
+
+const volumePopup = document.getElementById('volumePopup');
+volumePopup.style.display = 'none';
+
 var done = false;
 function onPlayerStateChange(event) {
   if (event.data === YT.PlayerState.ENDED) {

@@ -65,11 +65,20 @@
        <span class="badge bg-primary bg-opacity-25">
        <div class="playing" id="timeText"></div>
       </span>
-       <div class="controls">
-        <i id="previous" class="bi bi-caret-left-fill"></i>
-       <i id="switchPlaylist" class="bi bi-repeat"></i>
-       <i id="next" class="bi bi-caret-right-fill"></i>
-      </div>
+<div class="controls">
+  <i id="previous" class="bi bi-caret-left-fill"></i>
+  <i id="switchPlaylist" class="bi bi-repeat"></i>
+  <i id="next" class="bi bi-caret-right-fill"></i>
+  
+  <!-- Volume Button and Popup -->
+  <i id="volumeButton" class="bi bi-volume-up-fill"></i>
+  <div id="volumePopup" class="volume-popup">
+    <!-- Horizontal Volume Slider -->
+    <input type="range" id="volumeSlider" min="0" max="100" value="20">
+  </div>
+</div>
+
+      
       <h1 id="party" class="animate__animated animate__zoomIn"></h1>
       <div class="countdown-container" id="counter">
         <div class="element-container animate__animated animate__zoomIn">
