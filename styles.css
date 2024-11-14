@@ -468,3 +468,23 @@ h1 {
   height: 20px;
   cursor: pointer;
 }
+
+
+#closer span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #dc3545; /* Red color */
+  border: 2px solid #fff;
+  border-radius: 50%; /* Ensures the circle shape */
+  font-size: 12px; /* Adjusted font size */
+  color: white;
+  width: 20px; /* Default width */
+  height: 20px; /* Same as width for perfect circle */
+  display: flex;
+  align-items: center; /* Vertically centers the text */
+  justify-content: center; /* Horizontally centers the text */
+  text-align: center;
+  line-height: 20px; /* Ensures correct vertical alignment */
+}

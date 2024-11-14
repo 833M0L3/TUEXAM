@@ -398,53 +398,61 @@ var ft = now.toLocaleString("en-US", {
     }
 
 
-function w3_open() {
-  var div = document.getElementById("sidebarhero");
-  if (div.classList.contains("visible")) {
-    div.classList.add("hidden");
-    div.classList.remove("visible");
-  } else {
-    div.classList.remove("hidden");
-    div.classList.add("visible");
-  }
-}
+    function w3_open() {
+      var div = document.getElementById("sidebarhero");
+      if (div.classList.contains("visible")) {
+        div.classList.add("hidden");
+        div.classList.remove("visible");
+      } else {
+        div.classList.remove("hidden");
+        div.classList.add("visible");
+      }
+    }
+    
+    // Function to close the sidebar manually
+    function w3_close() {
+      var div = document.getElementById("sidebarhero");
+      div.classList.add("hidden");
+      div.classList.remove("visible");
+    }
+    
+    // Close the sidebar when clicking outside of it
+    document.addEventListener("click", function(event) {
+      var sidebar = document.getElementById("sidebarhero");
+      var button = document.querySelector(".w3-button"); // Assuming the button opens the sidebar
+    
+      // Check if the click was outside the sidebar and not on the button
+      if (!sidebar.contains(event.target) && !button.contains(event.target)) {
+        sidebar.classList.add("hidden");
+        sidebar.classList.remove("visible");
+      }
+    });
 
-function w3_close() {
-  var div = document.getElementById("sidebarhero");
-  div.classList.add("hidden");
-  div.classList.remove("visible");
-}
-
-fetch('notices.json')
-      .then(response => response.json())
-      .then(data => {
-        var sidebarList = document.getElementById("sidebar-list");
-        sidebarList.innerHTML = "";
-        data.forEach(item => {
-          var listItem = document.createElement("li");
-          var link = document.createElement("a");
-          link.href = item.link;
-          link.textContent = item.title;
-          listItem.appendChild(link);
-          sidebarList.appendChild(listItem);
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching JSON:', error);
+    fetch('notices.json')
+    .then(response => response.json())
+    .then(data => {
+      var sidebarList = document.getElementById("sidebar-list");
+      sidebarList.innerHTML = "";
+  
+      // Update the number of notices in the button
+      var noticeCount = data.length;
+      var noticeBadge = document.querySelector("#closer span");
+      noticeBadge.textContent = noticeCount;  // Update the number inside the badge
+  
+      data.forEach(item => {
+        var listItem = document.createElement("li");
+        var link = document.createElement("a");
+        link.href = item.link;
+        link.textContent = item.title;
+        link.target = "_blank"; // Open in new tab
+        listItem.appendChild(link);
+        sidebarList.appendChild(listItem);
       });
-
-// Dropdown arrow Animation
-let scrollDownElement = document.querySelector('.scrollDown');
-let originalPosition = window.scrollY;
-
-window.addEventListener('scroll', function() {
-  if (window.scrollY > originalPosition + 100) { //
-    scrollDownElement.classList.add('hidden');
-  } else {
-    scrollDownElement.classList.remove('hidden');
-  }
-});
-
+    })
+    .catch(error => {
+      console.log('Error fetching JSON:', error);
+    });
+  
 
 
 // YEAH ! I SKIPPED THE OOP CLASS. SORRY FOR THE MESSY CODE :D
