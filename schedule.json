@@ -200,11 +200,11 @@
 },
 {
     "title" : "CSIT 7th Sem",
-    "initial" : "2024-12-01T12:00:00",
+    "initial" : "2024-12-29T12:00:00",
     "schedules" : [
         {
             "subject": "Advanced JAVA Programming",
-            "date": "2024-12-01T12:00:00",
+            "date": "2024-12-29T12:00:00",
             "code": "CSC409"
         },
         {
