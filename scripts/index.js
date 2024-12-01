@@ -23,12 +23,12 @@ let currentsemname = getCookie('currentsemname');
 let dateLang = getCookie('datelang');
 
 if (currentsem === null) {
-  currentsem = '3';
+  currentsem = '6';
   setCookie('currentsem', currentsem, 365);
 }
 
 if (currentsemname === null) {
-  currentsemname = '4th';
+  currentsemname = '7th';
   setCookie('currentsemname', currentsemname, 365);
 }
 
