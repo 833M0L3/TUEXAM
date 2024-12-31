@@ -105,14 +105,20 @@ function previousVideo() {
 
 function switchPlaylist() {
   currentID = random_playlist(ids);
+  
   player.loadPlaylist({
     listType: 'playlist',
     list: currentID,
     'playsinline': 1,
     'autoplay': 1
   });
-}
 
+  setTimeout(() => {
+    let songs = player.getPlaylist();
+    let randomIndex = Math.floor(Math.random() * songs.length);
+    player.playVideoAt(randomIndex); 
+  }, 1000); 
+}
 
 
 function Titledata() {
