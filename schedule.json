@@ -164,36 +164,36 @@
 },
 {
     "title" : "CSIT 6th Sem",
-    "initial" : "2024-06-18T12:00:00",
+    "initial" : "2025-03-21T12:00:00",
     "schedules" : [
         {
             "subject": "Software Engineering",
-            "date": "2024-06-18T12:00:00",
+            "date": "2025-03-21T12:00:00",
             "code": "CSC364"
         },
         {
             "subject": "Compiler Design and Construction",
-            "date": "2024-06-21T12:00:00",
+            "date": "2025-03-25T12:00:00",
             "code": "CSC365"
         },
         {
             "subject": "E-Governance",
-            "date": "2024-06-24T12:00:00",
+            "date": "2025-03-28T12:00:00",
             "code" : "CSC366"
         },
         {
             "subject": "NET Centric Computing",
-            "date": "2024-06-27T12:00:00",
+            "date": "2025-03-31T12:00:00",
             "code": "CSC367"
         },
         {
             "subject": "Technical Writing",
-            "date": "2024-06-30T12:00:00",
+            "date": "2025-03-04T12:00:00",
             "code": "CSC368"
         },
         {
             "subject": "Elective II",
-            "date": "2024-07-03T12:00:00",
+            "date": "2025-04-06T12:00:00",
             "code": "CSC3XX"
         }
     ]
