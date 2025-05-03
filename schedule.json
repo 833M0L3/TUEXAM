@@ -226,57 +226,22 @@
 },
 {
     "title" : "CSIT 8th Sem",
-    "initial" : "2024-07-07T12:00:00",
+    "initial" : "2025-06-05T12:00:00",
     "schedules" : [
         {
             "subject": "Advanced Database",
-            "date": "2024-07-07T12:00:00",
+            "date": "2025-06-05T12:00:00",
             "code": "CSC461"
         },
         {
-            "subject": "Distributed and Object Oriented Database",
-            "date": "2024-07-10T12:00:00",
-            "code": "CSC466"
-        },
-        {
-            "subject": "Network System and Administration",
-            "date": "2024-07-11T12:00:00",
-            "code": "CSC472"
-        },
-        {
-            "subject": "Mobile Application Development",
-            "date": "2024-07-12T12:00:00",
-            "code": "CSC470"
-        },
-        {
             "subject": "Introduction to Cloud Computing",
-            "date": "2024-07-14T12:00:00",
+            "date": "2025-06-13T12:00:00",
             "code": "CSC467"
         },
         {
-            "subject": "Decision Support System and Expert System",
-            "date": "2024-07-16T12:00:00",
-            "code": "CSC469"
-        },
-        {
-            "subject": "International Business Management",
-            "date": "2024-07-17T12:00:00",
-            "code": "MGT474"
-        },
-        {
             "subject": "Geographical Information System",
-            "date": "2024-07-18T12:00:00",
+            "date": "2025-06-15T12:00:00",
             "code": "CSC468"
-        },
-        {
-            "subject": "Advanced Networking with IPV6",
-            "date": "2024-07-19T12:00:00",
-            "code": "CSC463"
-        },
-        {
-            "subject": "Distributed Networking",
-            "date": "2024-07-21T12:00:00",
-            "code": "CSC464"
         }
     ]
 }
