@@ -23,7 +23,7 @@ let currentsemname = getCookie('currentsemname');
 let dateLang = getCookie('datelang');
 
 if (currentsem === null) {
-  currentsem = '9';
+  currentsem = '8';
   setCookie('currentsem', currentsem, 365);
 }
 
