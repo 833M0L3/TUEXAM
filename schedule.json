@@ -226,21 +226,21 @@
 },
 {
     "title" : "CSIT 8th Sem",
-    "initial" : "2025-06-05T12:00:00",
+    "initial" : "2025-11-27T12:00:00",
     "schedules" : [
         {
             "subject": "Advanced Database",
-            "date": "2025-06-05T12:00:00",
+            "date": "2025-11-27T12:00:00",
             "code": "CSC461"
         },
         {
             "subject": "Introduction to Cloud Computing",
-            "date": "2025-06-11T12:00:00",
+            "date": "2025-11-30T12:00:00",
             "code": "CSC467"
         },
         {
             "subject": "Geographical Information System",
-            "date": "2025-06-15T12:00:00",
+            "date": "2025-12-03T12:00:00",
             "code": "CSC468"
         }
     ]
